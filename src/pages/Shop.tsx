@@ -1,4 +1,4 @@
-import { Bath, MessageSquare, Toilet } from "lucide-react";
+import { Bath, Toilet } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
@@ -81,11 +81,10 @@ const Shop = () => {
               </CardContent>
               <CardFooter className="p-3 sm:p-4 md:p-6">
                 <Button 
-                  className="w-full flex items-center justify-center px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm md:text-base" 
+                  className="w-full text-[10px] sm:text-xs md:text-sm" 
                   onClick={() => handleInquiry(product)}
                 >
-                  <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
-                  <span className="whitespace-nowrap">Inquire on WhatsApp</span>
+                  Inquire on WhatsApp
                 </Button>
               </CardFooter>
             </Card>
