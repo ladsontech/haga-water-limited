@@ -10,8 +10,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              Haga Water
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png" 
+                alt="Haga Water Limited Logo" 
+                className="h-12 w-auto mr-2"
+              />
+              <span className="text-2xl font-bold text-primary hidden sm:block">Haga Water</span>
             </Link>
           </div>
           
