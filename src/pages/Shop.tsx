@@ -81,11 +81,11 @@ const Shop = () => {
               </CardContent>
               <CardFooter className="p-3 sm:p-4 md:p-6">
                 <Button 
-                  className="w-full gap-1 sm:gap-2 text-xs sm:text-sm md:text-base py-1 sm:py-2" 
+                  className="w-full flex items-center justify-center px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm md:text-base" 
                   onClick={() => handleInquiry(product)}
                 >
-                  <MessageSquare className="h-3 w-3 sm:h-4 sm:w-4" />
-                  Inquire on WhatsApp
+                  <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
+                  <span className="whitespace-nowrap">Inquire on WhatsApp</span>
                 </Button>
               </CardFooter>
             </Card>
