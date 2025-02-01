@@ -1,9 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const projects = [
+    "Water Treatment Plant",
+    "Fishing Plant",
+    "LBA Labs - Kampala",
+    "LBA Labs - Jinja",
+    "LBA Labs - Mbarara",
+  ];
 
   return (
     <nav className="bg-white shadow-md">
@@ -23,6 +37,18 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary">Home</Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-primary">
+                Finished Projects
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {projects.map((project) => (
+                  <DropdownMenuItem key={project}>
+                    {project}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link to="/about" className="text-gray-700 hover:text-primary">About</Link>
             <Link to="/contact" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark">
               Contact Us
@@ -51,6 +77,17 @@ const Navbar = () => {
               >
                 Home
               </Link>
+              <div className="px-3 py-2 space-y-1">
+                <div className="text-gray-700 font-medium">Finished Projects</div>
+                {projects.map((project) => (
+                  <div
+                    key={project}
+                    className="block pl-4 py-1 text-sm text-gray-600 hover:text-primary"
+                  >
+                    {project}
+                  </div>
+                ))}
+              </div>
               <Link
                 to="/about"
                 className="block px-3 py-2 text-gray-700 hover:text-primary"

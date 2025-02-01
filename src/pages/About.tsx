@@ -14,7 +14,7 @@ const About = () => {
             <h2 className="text-lg sm:text-xl font-bold text-primary mb-3">Award Recognition</h2>
             <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
               <img 
-                src="/lovable-uploads/81654459-4af4-40f3-8b89-8b91ff3c89f6.png" 
+                src="/lovable-uploads/0f62153d-08d5-4f04-8f8a-413b39a35609.png" 
                 alt="Haga Water Limited receiving Maji Preneur award" 
                 className="rounded-lg shadow-md w-full md:w-1/2 object-cover"
               />
