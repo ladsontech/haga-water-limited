@@ -14,11 +14,13 @@ const Index = () => {
       title: "Domestic Services",
       description: "Expert residential plumbing services",
       Icon: Building2,
+      image: "/lovable-uploads/da3b8d8f-dde2-4b5b-b750-086568fd0f06.png",
     },
     {
       title: "Commercial & Industrial",
       description: "Large-scale plumbing solutions",
       Icon: Factory,
+      image: "/lovable-uploads/0718387f-8600-4cfd-93ac-6d8b9ba96d09.png",
     },
     {
       title: "Water Irrigation",
