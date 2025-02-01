@@ -16,7 +16,7 @@ const Navbar = () => {
                 alt="Haga Water Limited Logo" 
                 className="h-10 w-auto sm:h-12"
               />
-              <span className="text-lg sm:text-2xl font-bold text-primary ml-2">Haga Water</span>
+              <span className="text-lg sm:text-2xl font-bold text-primary ml-2">Haga Water Limited</span>
             </Link>
           </div>
           
