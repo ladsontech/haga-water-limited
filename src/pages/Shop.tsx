@@ -56,13 +56,13 @@ const Shop = () => {
         <h1 className="text-3xl sm:text-4xl font-bold text-primary-dark text-center mb-8">
           Sanitary Appliances
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {products.map((product, index) => (
             <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <product.icon className="h-6 w-6 text-primary" />
-                  <CardTitle className="text-xl">{product.name}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -73,7 +73,7 @@ const Shop = () => {
                     className="h-full w-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="text-gray-600 mb-2">{product.description}</p>
+                <p className="text-gray-600 text-sm sm:text-base mb-2">{product.description}</p>
               </CardContent>
               <CardFooter>
                 <Button 
