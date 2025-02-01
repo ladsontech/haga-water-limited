@@ -20,10 +20,14 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0066CC",
-          dark: "#003366",
+          DEFAULT: "#0EA5E9",
+          dark: "#0284C7",
         },
-        secondary: "#E5F0FF",
+        secondary: "#D3E4FD",
+        accent: {
+          DEFAULT: "#33C3F0",
+          foreground: "#F2FCE2",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -37,10 +41,6 @@ export default {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -50,14 +50,23 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: {
+        'water-gradient': 'linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%)',
+      },
       keyframes: {
         ripple: {
           "0%": { transform: "scale(0.8)", opacity: "1" },
           "100%": { transform: "scale(2)", opacity: "0" },
         },
+        wave: {
+          "0%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-25%)" },
+          "100%": { transform: "translateX(-50%)" },
+        }
       },
       animation: {
         ripple: "ripple 1s linear infinite",
+        wave: "wave 8s linear infinite",
       },
     },
   },

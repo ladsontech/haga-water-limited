@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import ContactForm from "@/components/ContactForm";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
 
 const Index = () => {
@@ -31,53 +30,40 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-water-gradient">
       <Hero />
       
       {/* Services Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Our Services</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-dark">Our Services</h2>
             <p className="mt-4 text-lg sm:text-xl text-gray-600">
               Professional plumbing solutions for every need
             </p>
           </div>
-          <div className="grid gap-12 md:gap-16 sm:grid-cols-2">
+          <div className="grid gap-8 md:gap-12 sm:grid-cols-2">
             {services.map((service) => (
               <div key={service.title} className="flex flex-col items-center sm:items-start">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                     <service.Icon className="text-primary h-5 w-5" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900">{service.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-primary-dark">{service.title}</h3>
                 </div>
                 <p className="text-lg text-gray-600 mb-6 text-center sm:text-left">{service.description}</p>
                 {service.image && (
-                  <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                  <div className="w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-auto"
+                      className="w-full h-auto transform transition-transform hover:scale-105 duration-300"
                     />
                   </div>
                 )}
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-12 sm:py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Contact Us</h2>
-            <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-gray-600">
-              Get in touch with our expert team
-            </p>
-          </div>
-          <ContactForm />
         </div>
       </section>
     </div>
