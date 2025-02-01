@@ -8,35 +8,43 @@ const Shop = () => {
     {
       name: "Modern Toilet Bowl",
       description: "Dual flush water-saving toilet with soft-close seat",
-      price: "UGX 450,000",
       icon: Toilet,
-      image: "/lovable-uploads/fe9d00f9-1c8e-4adc-b1f3-9973f453190a.png"
+      image: "/lovable-uploads/47721987-7060-4846-83b6-5e3bbcb2fb0e.png"
     },
     {
-      name: "Luxury Bathroom Sink",
-      description: "Wall-mounted ceramic sink with modern design",
-      price: "UGX 280,000",
+      name: "Squat Toilet",
+      description: "Traditional squat toilet with high-quality ceramic finish",
+      icon: Toilet,
+      image: "/lovable-uploads/a63888f6-044f-4a83-bf35-10bcb2320701.png"
+    },
+    {
+      name: "Wall-Mounted Urinal",
+      description: "Modern wall-mounted urinal with automatic flush system",
       icon: Bath,
-      image: "/lovable-uploads/81654459-4af4-40f3-8b89-8b91ff3c89f6.png"
+      image: "/lovable-uploads/741d7779-e196-4d5c-8d6e-704e173e5100.png"
     },
     {
-      name: "Premium Shower Set",
-      description: "Complete shower system with rainfall head",
-      price: "UGX 350,000",
-      icon: Bath,
-      image: "/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
-    },
-    {
-      name: "Flushing Cistern",
+      name: "Flush Cistern",
       description: "Efficient dual-flush cistern mechanism",
-      price: "UGX 180,000",
       icon: Bath,
-      image: "/lovable-uploads/0f62153d-08d5-4f04-8f8a-413b39a35609.png"
+      image: "/lovable-uploads/1187a00e-235f-4fa6-9879-c1c38f69a51a.png"
+    },
+    {
+      name: "Kitchen Sink",
+      description: "Premium stainless steel kitchen sink with modern faucet",
+      icon: Bath,
+      image: "/lovable-uploads/8e7fb609-f622-499a-8708-daf14795c28c.png"
+    },
+    {
+      name: "Washroom Sink",
+      description: "Contemporary ceramic washroom sink with mounting hardware",
+      icon: Bath,
+      image: "/lovable-uploads/6679d361-17df-4a56-ad5b-d4f7f985c63a.png"
     }
   ];
 
   const handleInquiry = (product: typeof products[0]) => {
-    const message = `Hello! I'm interested in the ${product.name} (${product.price}). Can you provide more information?`;
+    const message = `Hello! I'm interested in the ${product.name}. Can you provide more information?`;
     const phoneNumber = "+256755694693";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -66,7 +74,6 @@ const Shop = () => {
                   />
                 </div>
                 <p className="text-gray-600 mb-2">{product.description}</p>
-                <p className="font-semibold text-primary">{product.price}</p>
               </CardContent>
               <CardFooter>
                 <Button 
