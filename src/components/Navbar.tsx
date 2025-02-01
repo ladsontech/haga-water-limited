@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png" 
+                src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png" 
                 alt="Haga Water Limited Logo" 
                 className="h-10 w-auto sm:h-12"
               />

@@ -63,7 +63,7 @@ const Index = () => {
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                       <div className="bg-white/30 backdrop-blur-sm p-4 rounded-full">
                         <img 
-                          src="/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
+                          src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png"
                           alt="Haga Water Limited Logo"
                           className="w-24 h-auto opacity-60"
                         />
