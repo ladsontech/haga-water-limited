@@ -53,12 +53,20 @@ const Index = () => {
                 </div>
                 <p className="text-lg text-gray-600 mb-6 text-center sm:text-left">{service.description}</p>
                 {service.image && (
-                  <div className="w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow relative">
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-auto transform transition-transform hover:scale-105 duration-300"
                     />
+                    {/* Blurred Logo Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="bg-white/30 backdrop-blur-sm px-6 py-3 rounded-full">
+                        <p className="text-primary-dark font-semibold text-xl opacity-60">
+                          Haga Water Limited
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
