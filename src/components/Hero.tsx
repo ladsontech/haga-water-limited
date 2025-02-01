@@ -1,4 +1,4 @@
-import { WaterIcon } from "lucide-react";
+import { Droplet } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="absolute bottom-0 right-0 opacity-10">
-          <WaterIcon size={300} />
+          <Droplet size={300} />
         </div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-primary opacity-50" />
