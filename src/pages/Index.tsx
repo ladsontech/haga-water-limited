@@ -47,11 +47,11 @@ const Index = () => {
               <div key={service.title} className="flex flex-col">
                 <ServiceCard {...service} />
                 {service.image && (
-                  <div className="mt-4 rounded-lg overflow-hidden shadow-md aspect-video">
+                  <div className="mt-4 rounded-lg overflow-hidden shadow-md">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-auto"
                     />
                   </div>
                 )}
