@@ -12,20 +12,6 @@ const Hero = () => {
             <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto px-4">
               Your trusted partner for all plumbing and water-related needs. Professional services for domestic, commercial, and industrial projects.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 px-4">
-              <a
-                href="/contact"
-                className="bg-white text-primary px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors w-full sm:w-auto text-center"
-              >
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border-2 border-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-primary transition-colors w-full sm:w-auto text-center"
-              >
-                Our Services
-              </a>
-            </div>
           </div>
         </div>
         <div className="absolute bottom-0 right-0 opacity-10 hidden md:block">
