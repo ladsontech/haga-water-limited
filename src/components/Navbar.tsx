@@ -24,7 +24,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary">Home</Link>
             <Link to="/about" className="text-gray-700 hover:text-primary">About</Link>
-            <Link to="/services" className="text-gray-700 hover:text-primary">Services</Link>
             <Link to="/contact" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark">
               Contact Us
             </Link>
@@ -58,13 +57,6 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 About
-              </Link>
-              <Link
-                to="/services"
-                className="block px-3 py-2 text-gray-700 hover:text-primary"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
               </Link>
               <Link
                 to="/contact"
