@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import {
   DropdownMenu,
@@ -10,6 +10,7 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const projects = [
     "Water Treatment Plant",
@@ -18,6 +19,11 @@ const Navbar = () => {
     "LBA Labs - Jinja",
     "LBA Labs - Mbarara",
   ];
+
+  const handleProjectClick = (project: string) => {
+    navigate(`/project/${encodeURIComponent(project)}`);
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-white shadow-md">
@@ -43,7 +49,10 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {projects.map((project) => (
-                  <DropdownMenuItem key={project}>
+                  <DropdownMenuItem 
+                    key={project}
+                    onClick={() => handleProjectClick(project)}
+                  >
                     {project}
                   </DropdownMenuItem>
                 ))}
@@ -82,7 +91,8 @@ const Navbar = () => {
                 {projects.map((project) => (
                   <div
                     key={project}
-                    className="block pl-4 py-1 text-sm text-gray-600 hover:text-primary"
+                    className="block pl-4 py-1 text-sm text-gray-600 hover:text-primary cursor-pointer"
+                    onClick={() => handleProjectClick(project)}
                   >
                     {project}
                   </div>
