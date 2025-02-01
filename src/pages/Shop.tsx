@@ -1,4 +1,4 @@
-import { Bath, MessageSquare, Shower, Toilet } from "lucide-react";
+import { Bath, MessageSquare, Toilet } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
@@ -23,7 +23,7 @@ const Shop = () => {
       name: "Premium Shower Set",
       description: "Complete shower system with rainfall head",
       price: "UGX 350,000",
-      icon: Shower,
+      icon: Bath,
       image: "/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
     },
     {
