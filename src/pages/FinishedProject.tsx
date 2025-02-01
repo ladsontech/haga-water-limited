@@ -75,7 +75,7 @@ const FinishedProject = () => {
 
         {/* Project Images Section */}
         <div className="mt-16">
-          <h2 className="text-2xl font-semibold text-primary-dark mb-8 text-center">Our Work Categories</h2>
+          <h2 className="text-2xl font-semibold text-primary-dark mb-8 text-center">Plumbers at Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projectImages.map((image) => (
               <div key={image.category} className="flex flex-col items-center">
