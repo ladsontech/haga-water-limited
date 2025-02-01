@@ -42,7 +42,7 @@ const FinishedProject = () => {
 
   const project = projectDetails[projectName as string];
 
-  if (!project) {
+  if (!project && projectName) {
     return (
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold text-red-600">Project not found</h1>
@@ -52,8 +52,6 @@ const FinishedProject = () => {
       </div>
     );
   }
-
-  const allProjects = Object.entries(projectDetails);
 
   return (
     <div className="container mx-auto px-4 py-8 bg-water-gradient min-h-screen">
@@ -88,30 +86,26 @@ const FinishedProject = () => {
             </Card>
           </div>
         ) : (
-          // Projects Grid View
-          <div>
+          // Projects List View
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold text-primary mb-8 text-center">Our Finished Projects</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allProjects.map(([name, details]) => (
+            <div className="space-y-4">
+              {Object.entries(projectDetails).map(([name, details]) => (
                 <Card 
                   key={name}
-                  className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm"
+                  className="bg-white/80 backdrop-blur-sm hover:shadow-md transition-all duration-300"
                   onClick={() => navigate(`/project/${encodeURIComponent(name)}`)}
                 >
-                  <div className="aspect-video w-full overflow-hidden">
-                    <img
-                      src={details.image}
-                      alt={name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
                   <CardContent className="p-4">
-                    <h3 className="text-xl font-semibold text-primary-dark mb-2">{name}</h3>
-                    <div className="mb-2">
-                      <span className="text-sm font-medium text-primary-dark">Location: </span>
-                      <span className="text-sm text-gray-600">{details.location}</span>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <h3 className="text-xl font-semibold text-primary-dark">{name}</h3>
+                        <p className="text-sm text-gray-600">{details.location}</p>
+                      </div>
+                      <Button variant="ghost" className="hover:bg-primary/10">
+                        View Details →
+                      </Button>
                     </div>
-                    <p className="text-gray-600 text-sm line-clamp-2">{details.description}</p>
                   </CardContent>
                 </Card>
               ))}
