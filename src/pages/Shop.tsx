@@ -52,35 +52,39 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen bg-water-gradient">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl sm:text-4xl font-bold text-primary-dark text-center mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-dark text-center mb-6 sm:mb-8">
           Sanitary Appliances
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {products.map((product, index) => (
             <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <product.icon className="h-6 w-6 text-primary" />
-                  <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
+              <CardHeader className="p-3 sm:p-4 md:p-6">
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <product.icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-primary" />
+                  <CardTitle className="text-sm sm:text-base md:text-lg lg:text-xl truncate">
+                    {product.name}
+                  </CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <div className="aspect-square w-full overflow-hidden rounded-lg mb-4">
+              <CardContent className="flex-grow p-3 sm:p-4 md:p-6 pt-0">
+                <div className="aspect-square w-full overflow-hidden rounded-lg mb-2 sm:mb-3">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="h-full w-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="text-gray-600 text-sm sm:text-base mb-2">{product.description}</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-2">
+                  {product.description}
+                </p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="p-3 sm:p-4 md:p-6">
                 <Button 
-                  className="w-full gap-2" 
+                  className="w-full gap-1 sm:gap-2 text-xs sm:text-sm md:text-base py-1 sm:py-2" 
                   onClick={() => handleInquiry(product)}
                 >
-                  <MessageSquare className="h-4 w-4" />
+                  <MessageSquare className="h-3 w-3 sm:h-4 sm:w-4" />
                   Inquire on WhatsApp
                 </Button>
               </CardFooter>
