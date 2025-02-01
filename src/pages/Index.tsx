@@ -35,38 +35,49 @@ const Index = () => {
       <Hero />
       
       {/* Services Section */}
-      <section className="py-12 sm:py-16 md:py-20">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-dark">Our Services</h2>
-            <p className="mt-4 text-lg sm:text-xl text-gray-600">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-dark">
+              Our Services
+            </h2>
+            <p className="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
               Professional plumbing solutions for every need
             </p>
           </div>
-          <div className="grid gap-8 md:gap-12 sm:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {services.map((service) => (
-              <div key={service.title} className="flex flex-col items-center sm:items-start">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <service.Icon className="text-primary h-5 w-5" />
+              <div 
+                key={service.title} 
+                className="flex flex-col space-y-4 sm:space-y-6"
+              >
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                    <service.Icon className="text-primary h-6 w-6" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-primary-dark">{service.title}</h3>
+                  <div className="text-center sm:text-left">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary-dark">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-sm sm:text-base lg:text-lg text-gray-600">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-lg text-gray-600 mb-6 text-center sm:text-left">{service.description}</p>
                 {service.image && (
-                  <div className="w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow relative">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-auto transform transition-transform hover:scale-105 duration-300"
+                      className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
                     />
                     {/* Blurred Logo Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
                         <img 
                           src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png"
                           alt="Haga Water Limited Logo"
-                          className="w-16 h-auto opacity-40"
+                          className="w-12 sm:w-16 h-auto opacity-40"
                         />
                       </div>
                     </div>
