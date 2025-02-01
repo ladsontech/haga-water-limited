@@ -6,25 +6,25 @@ const Index = () => {
   const services = [
     {
       title: "General Plumbing",
-      description: "Complete plumbing solutions for all your needs",
+      description: "Complete plumbing solutions for all your needs, including leak detection, pipe repairs, fixture installations, drain cleaning, and emergency plumbing services. We ensure reliable and efficient solutions for your plumbing concerns.",
       Icon: Droplet,
       image: "/lovable-uploads/1fa88823-0c19-4d22-86f9-c74f9500b04f.png",
     },
     {
       title: "Domestic Services",
-      description: "Expert residential plumbing services",
+      description: "Expert residential plumbing services including bathroom and kitchen installations, water heater maintenance, pipe replacements, water pressure solutions, and preventive maintenance for your home's plumbing system.",
       Icon: Building2,
       image: "/lovable-uploads/da3b8d8f-dde2-4b5b-b750-086568fd0f06.png",
     },
     {
       title: "Commercial & Industrial",
-      description: "Large-scale plumbing solutions",
+      description: "Large-scale plumbing solutions including water treatment systems, supply of quality plumbing materials, industrial pipe installations, maintenance contracts, and specialized solutions for factories and commercial buildings.",
       Icon: Factory,
       image: "/lovable-uploads/0718387f-8600-4cfd-93ac-6d8b9ba96d09.png",
     },
     {
       title: "Water Irrigation",
-      description: "Efficient irrigation systems",
+      description: "Efficient irrigation systems including sprinkler system design and installation, drip irrigation, smart water management solutions, landscape irrigation, and water conservation systems for agricultural and landscaping needs.",
       Icon: Sprout,
       image: "/lovable-uploads/d13dd86d-f07a-4a88-b2f7-ad15fbfb0adf.png",
     },
