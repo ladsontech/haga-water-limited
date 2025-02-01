@@ -2,12 +2,26 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-6 sm:py-8 md:py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-primary">About Haga Water</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 md:mb-8 text-primary">About Haga Water Limited</h1>
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
           <div>
             <p className="text-sm sm:text-base text-gray-700">
               Haga Water Limited is a service-oriented company established by Ugandan Water Engineers with a vision to become the most reliable, creative, and transparent service provider in the plumbing and water solutions industry. Founded two years ago, we specialize in delivering high-quality plumbing services, water treatment solutions, and civil works for general, domestic, commercial, and industrial projects.
             </p>
+          </div>
+
+          <div className="bg-blue-50 rounded-lg p-4 sm:p-6">
+            <h2 className="text-lg sm:text-xl font-bold text-primary mb-3">Award Recognition</h2>
+            <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
+              <img 
+                src="/lovable-uploads/81654459-4af4-40f3-8b89-8b91ff3c89f6.png" 
+                alt="Haga Water Limited receiving Maji Preneur award" 
+                className="rounded-lg shadow-md w-full md:w-1/2 object-cover"
+              />
+              <p className="text-sm sm:text-base text-gray-700">
+                We are proud recipients of the prestigious Maji Preneur award, recognizing our excellence and innovation in water filtration solutions. This award acknowledges our commitment to providing sustainable and efficient water treatment technologies to our communities.
+              </p>
+            </div>
           </div>
 
           <div>
