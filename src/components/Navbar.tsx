@@ -1,29 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-
-  const projects = [
-    "Water Treatment Plant",
-    "Fishing Plant",
-    "LBA Labs - Kampala",
-    "LBA Labs - Jinja",
-    "LBA Labs - Mbarara",
-  ];
-
-  const handleProjectClick = (project: string) => {
-    navigate(`/project/${encodeURIComponent(project)}`);
-    setIsOpen(false);
-  };
 
   return (
     <nav className="bg-white shadow-md">
@@ -43,21 +24,9 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary">Home</Link>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-gray-700 hover:text-primary">
-                Finished Projects
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {projects.map((project) => (
-                  <DropdownMenuItem 
-                    key={project}
-                    onClick={() => handleProjectClick(project)}
-                  >
-                    {project}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link to="/project/Finished Projects" className="text-gray-700 hover:text-primary">
+              Finished Projects
+            </Link>
             <Link to="/about" className="text-gray-700 hover:text-primary">About</Link>
             <Link to="/contact" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark">
               Contact Us
@@ -87,7 +56,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/project/Water Treatment Plant"
+                to="/project/Finished Projects"
                 className="block px-3 py-2 text-gray-700 hover:text-primary"
                 onClick={() => setIsOpen(false)}
               >
