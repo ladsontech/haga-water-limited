@@ -61,11 +61,11 @@ const Index = () => {
                     />
                     {/* Blurred Logo Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <div className="bg-white/30 backdrop-blur-sm p-4 rounded-full">
+                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
                         <img 
                           src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png"
                           alt="Haga Water Limited Logo"
-                          className="w-24 h-auto opacity-60"
+                          className="w-16 h-auto opacity-40"
                         />
                       </div>
                     </div>
