@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
 
 const Index = () => {
@@ -76,6 +77,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
