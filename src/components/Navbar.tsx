@@ -24,6 +24,7 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary">Home</Link>
+            <Link to="/shop" className="text-gray-700 hover:text-primary">Shop</Link>
             <Link to="/project/Finished Projects" className="text-gray-700 hover:text-primary">
               Finished Projects
             </Link>
@@ -54,6 +55,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Home
+              </Link>
+              <Link
+                to="/shop"
+                className="block px-3 py-2 text-gray-700 hover:text-primary"
+                onClick={() => setIsOpen(false)}
+              >
+                Shop
               </Link>
               <Link
                 to="/project/Finished Projects"
