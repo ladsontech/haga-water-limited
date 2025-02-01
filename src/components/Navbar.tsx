@@ -86,18 +86,13 @@ const Navbar = () => {
               >
                 Home
               </Link>
-              <div className="px-3 py-2 space-y-1">
-                <div className="text-gray-700 font-medium">Finished Projects</div>
-                {projects.map((project) => (
-                  <div
-                    key={project}
-                    className="block pl-4 py-1 text-sm text-gray-600 hover:text-primary cursor-pointer"
-                    onClick={() => handleProjectClick(project)}
-                  >
-                    {project}
-                  </div>
-                ))}
-              </div>
+              <Link
+                to="/project/Water Treatment Plant"
+                className="block px-3 py-2 text-gray-700 hover:text-primary"
+                onClick={() => setIsOpen(false)}
+              >
+                Finished Projects
+              </Link>
               <Link
                 to="/about"
                 className="block px-3 py-2 text-gray-700 hover:text-primary"
