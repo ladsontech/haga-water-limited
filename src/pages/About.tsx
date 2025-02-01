@@ -16,7 +16,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/0f62153d-08d5-4f04-8f8a-413b39a35609.png" 
                 alt="Haga Water Limited receiving Maji Preneur award" 
-                className="rounded-lg shadow-md w-full md:w-1/2 object-cover"
+                className="rounded-lg shadow-md w-full md:w-2/5 object-cover"
               />
               <p className="text-sm sm:text-base text-gray-700">
                 We are proud recipients of the prestigious Maji Preneur award, recognizing our excellence and innovation in water filtration solutions. This award acknowledges our commitment to providing sustainable and efficient water treatment technologies to our communities.
