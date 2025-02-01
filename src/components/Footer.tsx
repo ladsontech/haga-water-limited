@@ -1,4 +1,4 @@
-import { Mail, Phone, Globe, Home, Users, Briefcase } from "lucide-react";
+import { Mail, Phone, Globe, Home, Users, Briefcase, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
@@ -7,6 +7,7 @@ const Footer = () => {
     { icon: <Home className="w-4 h-4" />, label: "Home", path: "/" },
     { icon: <Users className="w-4 h-4" />, label: "About Us", path: "/about" },
     { icon: <Briefcase className="w-4 h-4" />, label: "Projects", path: "/project/Finished Projects" },
+    { icon: <ShoppingBag className="w-4 h-4" />, label: "Shop", path: "/shop" },
   ];
 
   const contactInfo = [

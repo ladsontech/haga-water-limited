@@ -46,6 +46,13 @@ const About = () => {
           </div>
 
           <div>
+            <h2 className="text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">Our Projects & Partnerships</h2>
+            <p className="text-sm sm:text-base text-gray-700">
+              We are proud to work with both Government and Non-Government Organizations (NGOs) on various water infrastructure and sanitation projects. Our experience includes collaborating with local government authorities, international development agencies, and community-based organizations to implement sustainable water solutions across Uganda. These partnerships have enabled us to contribute significantly to improving water access and sanitation in both urban and rural areas.
+            </p>
+          </div>
+
+          <div>
             <h2 className="text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">Environmental Commitment</h2>
             <p className="text-sm sm:text-base text-gray-700">
               We are committed to promoting environmental sustainability through collaborations with NGOs and non-NGOs. Our initiatives include tree planting, proper sanitation, waste disposal, and water storage to reduce the spread of diseases like malaria and diarrhea.
