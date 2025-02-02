@@ -14,6 +14,7 @@ const Footer = () => {
     { icon: <Phone className="w-4 h-4" />, label: "+256 787 556897", link: "tel:+256787556897" },
     { icon: <Mail className="w-4 h-4" />, label: "hagawater11@gmail.com", link: "mailto:hagawater11@gmail.com" },
     { icon: <Globe className="w-4 h-4" />, label: "Spot Complex, Kasangati, Kampala", link: "https://maps.google.com/maps?q=Spot+Complex,+Kasangati,+Kampala" },
+    { icon: <Mail className="w-4 h-4" />, label: "P.O. Box 108195 Kampala", link: "#" },
   ];
 
   return (
@@ -58,8 +59,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={info.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={info.link !== "#" ? "_blank" : undefined}
+                  rel={info.link !== "#" ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors text-sm sm:text-base"
                 >
                   {info.icon}
