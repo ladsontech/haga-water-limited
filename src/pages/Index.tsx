@@ -42,7 +42,7 @@ const Index = () => {
               Our Services
             </h2>
             <p className="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
-              Professional plumbing solutions for every need
+              Dealers In General Plumbing And Water Engineering Services
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">

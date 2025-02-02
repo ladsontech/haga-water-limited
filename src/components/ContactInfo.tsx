@@ -31,6 +31,12 @@ const ContactInfo = () => {
       title: "Location",
       value: "Spot Complex, Kasangati, Kampala",
       link: "https://maps.google.com/maps?q=Spot+Complex,+Kasangati,+Kampala"
+    },
+    {
+      icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
+      title: "Postal Address",
+      value: "P.O. Box 108195 Kampala",
+      link: "#"
     }
   ];
 
@@ -42,8 +48,8 @@ const ContactInfo = () => {
           <a
             key={index}
             href={contact.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={contact.link !== "#" ? "_blank" : undefined}
+            rel={contact.link !== "#" ? "noopener noreferrer" : undefined}
             className="flex items-center p-4 sm:p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center mr-3 sm:mr-4">
