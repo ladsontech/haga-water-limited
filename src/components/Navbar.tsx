@@ -15,7 +15,7 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png" 
                 alt="Haga Water Limited Logo" 
-                className="h-10 w-auto sm:h-12"
+                className="h-14 w-auto sm:h-16"
               />
               <div className="flex flex-col ml-2">
                 <span className="border-b-2 border-red-500">
