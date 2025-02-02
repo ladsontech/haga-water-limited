@@ -19,9 +19,10 @@ const Navbar = () => {
               />
               <div className="flex flex-col ml-2">
                 <span className="border-b-2 border-red-500">
-                  <span className="text-lg sm:text-2xl font-bold text-red-500">HAGA WATER</span>
+                  <span className="text-lg sm:text-2xl font-bold text-red-500">HAGA WATER </span>
                   <span className="text-lg sm:text-2xl font-bold text-primary">LIMITED</span>
                 </span>
+                <span className="text-sm text-red-500 italic mt-1">"water knows us"</span>
               </div>
             </Link>
           </div>
