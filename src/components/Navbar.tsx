@@ -22,7 +22,7 @@ const Navbar = () => {
                   <span className="text-lg sm:text-2xl font-bold text-red-500">HAGA WATER </span>
                   <span className="text-lg sm:text-2xl font-bold text-primary">LIMITED</span>
                 </span>
-                <span className="text-sm text-red-500 italic mt-1">"water knows us"</span>
+                <span className="text-sm text-red-500 italic mt-1 text-center w-full">"Water knows us"</span>
               </div>
             </Link>
           </div>
