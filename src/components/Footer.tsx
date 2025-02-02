@@ -26,7 +26,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png" 
               alt="Haga Water Limited Logo" 
-              className="h-16 sm:h-20 w-auto"
+              className="h-20 sm:h-24 w-auto"
             />
             <p className="text-sm text-gray-600 text-center md:text-left max-w-xs">
               Your trusted partner for all plumbing and water-related needs.
