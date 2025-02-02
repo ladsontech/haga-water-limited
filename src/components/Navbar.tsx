@@ -17,7 +17,12 @@ const Navbar = () => {
                 alt="Haga Water Limited Logo" 
                 className="h-10 w-auto sm:h-12"
               />
-              <span className="text-lg sm:text-2xl font-bold text-primary ml-2 uppercase">HAGA WATER LIMITED</span>
+              <div className="flex flex-col ml-2">
+                <span className="border-b-2 border-red-500">
+                  <span className="text-lg sm:text-2xl font-bold text-red-500">HAGA WATER</span>
+                  <span className="text-lg sm:text-2xl font-bold text-primary">LIMITED</span>
+                </span>
+              </div>
             </Link>
           </div>
           
