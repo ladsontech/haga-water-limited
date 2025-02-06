@@ -8,27 +8,32 @@ const FinishedProject = () => {
       description: "Complete water treatment and management system installation for Hotel Lafesa, ensuring clean and sustainable water supply for guests and operations.",
     },
     {
-      name: "Fishing Plant",
-      location: "Lake Victoria Region",
-      description: "State-of-the-art water management and treatment facility for a commercial fishing plant, maintaining optimal water quality for fish processing and sustainability.",
+      name: "Healing Way Diagnostic Special",
+      location: "Bugolobi",
+      description: "water treatment plant.",
     },
     {
-      name: "LBA Labs - Kampala",
+      name: "MBN Labs - Kampala",
       location: "Central Kampala",
       description: "Advanced laboratory facility in Kampala equipped with cutting-edge water testing and analysis capabilities, serving the greater Kampala metropolitan area.",
     },
     {
-      name: "LBA Labs - Jinja",
+      name: "MBN Labs - Jinja",
       location: "Jinja City",
       description: "Specialized water quality testing facility serving the Jinja region with modern analytical equipment and comprehensive water quality assessments."
     },
     {
-      name: "LBA Labs - Mbarara",
+      name: "African Bio Labs",
+      location: "Jinja City",
+      description: "Specialized water quality testing facility serving the Jinja region with modern analytical equipment and comprehensive water quality assessments."
+    },
+    {
+      name: "MBN Labs - Mbarara",
       location: "Mbarara City",
       description: "State-of-the-art laboratory in Mbarara providing comprehensive water analysis services for the western region of Uganda."
     },
     {
-      name: "LBA Labs - Mbale",
+      name: "MBN Labs - Mbale",
       location: "Mbale City",
       description: "Modern water testing facility equipped with the latest technology to serve the eastern region, ensuring water quality standards are met."
     }
@@ -42,13 +47,13 @@ const FinishedProject = () => {
     },
     {
       src: "/lovable-uploads/5ae8cefa-229f-4d58-a73a-56db43e9f1b1.png",
-      category: "Domestic Home Installation",
+      category: "Installing Sanitary appliances in domestic applicances",
       alt: "Domestic Home Installation Project"
     },
     {
       src: "/lovable-uploads/fe9d00f9-1c8e-4adc-b1f3-9973f453190a.png",
-      category: "Maintenance Work",
-      alt: "Maintenance Work Project"
+      category: "Pipe line Maintenances",
+      alt: "Pipe line Repair"
     }
   ];
 
