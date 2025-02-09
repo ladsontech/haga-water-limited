@@ -15,7 +15,7 @@ interface Service {
   title: string;
   description: string;
   image: string;
-  icon: LucideIcon;  // Changed to use LucideIcon type
+  icon: LucideIcon;
 }
 
 const Index = () => {
@@ -99,7 +99,8 @@ const Index = () => {
                 <div className="p-6 sm:p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-primary/10 rounded-xl">
-                      <service.icon size={32} className="text-primary" />
+                      {/* Update the icon rendering */}
+                      {service.icon && <service.icon size={32} strokeWidth={2} className="text-primary" />}
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">
                       {service.title}
@@ -127,7 +128,7 @@ const Index = () => {
           <source src="/sounds/water-flowing.mp3" type="audio/mpeg" />
         </audio>
 
-        <Footer className="bg-white/80 backdrop-blur-sm" />
+        <Footer />
       </div>
     </div>
   );
