@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
@@ -33,73 +34,79 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-water-gradient">
       {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-50 z-[-1]"
-      >
-        <source src="/lovable-uploads/waterfountain.mp4" type="video/mp4" />
-      </video>
+      <div className="fixed inset-0 w-full h-full z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+        >
+          <source src="/lovable-uploads/waterfountain.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-      <Hero />
-      
-      {/* Services Section */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-dark">
-              Our Services
-            </h2>
-            <p className="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
-              Dealers In General Plumbing And Water Engineering Services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-            {services.map((service) => (
-              <div 
-                key={service.title} 
-                className="flex flex-col space-y-4 sm:space-y-6"
-              >
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                    <service.Icon className="text-primary h-6 w-6" />
-                  </div>
-                  <div className="text-center sm:text-left">
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary-dark">
-                      {service.title}
-                    </h3>
-                    <p className="mt-2 text-sm sm:text-base lg:text-lg text-gray-600">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-                {service.image && (
-                  <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
-                    />
-                    {/* Blurred Logo Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
-                        <img 
-                          src="/lovable-uploads/logo.png"
-                          alt="Haga Water Limited Logo"
-                          className="w-12 sm:w-16 h-auto opacity-40"
-                        />
-                      </div>
+      {/* Content Container */}
+      <div className="relative z-10">
+        <Hero />
+        
+        {/* Services Section */}
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-dark">
+                Our Services
+              </h2>
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
+                Dealers In General Plumbing And Water Engineering Services
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+              {services.map((service) => (
+                <div 
+                  key={service.title} 
+                  className="flex flex-col space-y-4 sm:space-y-6"
+                >
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                      <service.Icon className="text-primary h-6 w-6" />
+                    </div>
+                    <div className="text-center sm:text-left">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary-dark">
+                        {service.title}
+                      </h3>
+                      <p className="mt-2 text-sm sm:text-base lg:text-lg text-gray-600">
+                        {service.description}
+                      </p>
                     </div>
                   </div>
-                )}
-              </div>
-            ))}
+                  {service.image && (
+                    <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
+                      />
+                      {/* Blurred Logo Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
+                          <img 
+                            src="/lovable-uploads/logo.png"
+                            alt="Haga Water Limited Logo"
+                            className="w-12 sm:w-16 h-auto opacity-40"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      <Footer />
+        </section>
+        <Footer />
+      </div>
     </div>
   );
 };
