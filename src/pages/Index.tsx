@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
@@ -34,6 +35,20 @@ const Index = () => {
     <div className="relative min-h-screen bg-water-gradient">
       <div className="relative z-10">
         <Hero />
+        
+        {/* Decorative Image Section */}
+        <div className="relative max-w-5xl mx-auto my-12">
+          <img 
+            src="/lovable-uploads/c679483b-e4d8-4326-b013-b79a7ceec1b3.png"
+            alt="Water knows us"
+            className="w-full h-[300px] object-cover rounded-lg shadow-xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg flex items-end justify-center pb-6">
+            <p className="text-white text-2xl font-italic font-medium">
+              "Water knows us"
+            </p>
+          </div>
+        </div>
         
         {/* Services Section */}
         <section className="py-8 sm:py-12 md:py-16 lg:py-20">
