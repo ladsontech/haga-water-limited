@@ -33,15 +33,6 @@ const Hero = () => {
           <Droplet size={300} />
         </div>
       </div>
-      
-      {/* Animated wave effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 opacity-30">
-        <div className="absolute inset-0 animate-wave" style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z' fill='%23FFFFFF' fill-opacity='.25'/%3E%3C/svg%3E\")",
-          backgroundSize: "100% 100%",
-          width: "200%",
-        }} />
-      </div>
     </div>
   );
 };
