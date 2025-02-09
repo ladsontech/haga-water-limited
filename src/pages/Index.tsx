@@ -1,7 +1,7 @@
 
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Droplet, Building2, Factory, Sprout } from "lucide-react";
+import { Droplet, Building2, Factory, Sprout, LucideIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface Bubble {
@@ -15,7 +15,7 @@ interface Service {
   title: string;
   description: string;
   image: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;  // Changed to use LucideIcon type
 }
 
 const Index = () => {
@@ -99,7 +99,7 @@ const Index = () => {
                 <div className="p-6 sm:p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-primary/10 rounded-xl">
-                      <service.icon className="text-primary h-8 w-8" />
+                      <service.icon size={32} className="text-primary" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">
                       {service.title}
