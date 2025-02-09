@@ -7,25 +7,25 @@ const Index = () => {
   const services = [
     {
       title: "Domestic Plumbing",
-      description: "Centers on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and reusing rainwater for gardens or household needs). Focuses on water conservation through low-flow fixtures and leak repair.",
+      description: "Focuses on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and storing rainwater for household use). Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
       image: "/lovable-uploads/6679d361-17df-4a56-ad5b-d4f7f985c63a.png"
     },
     {
       title: "Commercial Plumbing",
-      description: "Supports water and sanitation infrastructure for businesses, providing durable sanitary products (faucets, toilets) and maintaining water supply/drainage systems. Ensures compliance with hygiene standards and water efficiency in high-traffic environments.",
+      description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products (touchless faucets, commercial toilets) and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
       Icon: Factory,
       image: "/lovable-uploads/741d7779-e196-4d5c-8d6e-704e173e5100.png"
     },
     {
       title: "Industrial Plumbing",
-      description: "Addresses large-scale water management, including treatment (filtering, recycling wastewater) and irrigation systems (drip/sprinkler networks for agriculture or landscaping). Emphasizes durable pipelines and eco-friendly practices to reduce water waste.",
+      description: "Specializes in large-scale water solutions, including water treatment (filtering, recycling wastewater) and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
       image: "/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
     },
     {
-      title: "Water Engineering",
-      description: "Advanced water engineering services including design, installation, and maintenance of water systems.",
+      title: "Water Irrigation Systems",
+      description: "Dedicated to designing, installing, and maintaining custom irrigation solutions for:\n\nResidential Gardens: Drip irrigation, sprinklers, and rainwater-fed systems.\n\nCommercial Landscapes: Automated or manual systems for parks, campuses, or commercial complexes.",
       Icon: Droplet,
       image: "/lovable-uploads/8e7fb609-f622-499a-8708-daf14795c28c.png"
     }
