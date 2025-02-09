@@ -8,7 +8,7 @@ const Index = () => {
       title: "General Plumbing",
       description: "Complete plumbing solutions for all your needs, including leak detection, pipe repairs, fixture installations, drain cleaning, and emergency plumbing services. We ensure reliable and efficient solutions for your plumbing concerns.",
       Icon: Droplet,
-      image: "/lovable-uploads/1fa88823-0c19-4d22-86f9-c74f9500b04f.png",
+      image: "/lovable-uploads/general.jpeg",
     },
     {
       title: "Domestic Services",
@@ -75,7 +75,7 @@ const Index = () => {
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
                         <img 
-                          src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png"
+                          src="/lovable-uploads/logo.png"
                           alt="Haga Water Limited Logo"
                           className="w-12 sm:w-16 h-auto opacity-40"
                         />
