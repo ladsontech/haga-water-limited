@@ -1,10 +1,22 @@
+
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const menuItems = [
+    { path: "/", label: "Home" },
+    { path: "/shop", label: "Shop" },
+    { path: "/project/Finished Projects", label: "Finished Projects" },
+    { path: "/about", label: "About" },
+  ];
 
   return (
     <nav className="bg-white shadow-md">
@@ -29,13 +41,25 @@ const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-primary">Home</Link>
-            <Link to="/shop" className="text-gray-700 hover:text-primary">Shop</Link>
-            <Link to="/project/Finished Projects" className="text-gray-700 hover:text-primary">
-              Finished Projects
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-primary">About</Link>
-            <Link to="/contact" className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark">
+            {menuItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-gray-700 hover:text-primary transition-colors ${
+                  isActive(item.path)
+                    ? "border-b-2 border-primary text-primary font-medium"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link 
+              to="/contact" 
+              className={`bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors ${
+                isActive("/contact") ? "ring-2 ring-primary-dark" : ""
+              }`}
+            >
               Contact Us
             </Link>
           </div>
@@ -55,37 +79,25 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                to="/"
-                className="block px-3 py-2 text-gray-700 hover:text-primary"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                to="/shop"
-                className="block px-3 py-2 text-gray-700 hover:text-primary"
-                onClick={() => setIsOpen(false)}
-              >
-                Shop
-              </Link>
-              <Link
-                to="/project/Finished Projects"
-                className="block px-3 py-2 text-gray-700 hover:text-primary"
-                onClick={() => setIsOpen(false)}
-              >
-                Finished Projects
-              </Link>
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-gray-700 hover:text-primary"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
+              {menuItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`block px-3 py-2 rounded-md ${
+                    isActive(item.path)
+                      ? "bg-primary/10 text-primary font-medium"
+                      : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link
                 to="/contact"
-                className="block px-3 py-2 bg-primary text-white rounded-md"
+                className={`block px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark ${
+                  isActive("/contact") ? "ring-2 ring-primary-dark" : ""
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us

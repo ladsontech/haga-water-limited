@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
@@ -33,21 +32,6 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-water-gradient">
-      {/* Background Video */}
-      <div className="fixed inset-0 w-full h-full z-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        >
-          <source src="/lovable-uploads/waterfountain.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      {/* Content Container */}
       <div className="relative z-10">
         <Hero />
         
@@ -88,7 +72,6 @@ const Index = () => {
                         alt={service.title}
                         className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
                       />
-                      {/* Blurred Logo Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
                         <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
                           <img 
