@@ -1,10 +1,34 @@
+
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
 
 const Index = () => {
   const services = [
-    // ... (keep services array unchanged)
+    {
+      title: "Domestic",
+      description: "Expert plumbing solutions for homes and residential properties, ensuring comfort and safety for your family.",
+      Icon: Building2,
+      image: "/lovable-uploads/6679d361-17df-4a56-ad5b-d4f7f985c63a.png"
+    },
+    {
+      title: "Commercial",
+      description: "Comprehensive plumbing services for businesses, offices, and commercial establishments.",
+      Icon: Factory,
+      image: "/lovable-uploads/741d7779-e196-4d5c-8d6e-704e173e5100.png"
+    },
+    {
+      title: "Agricultural",
+      description: "Specialized irrigation and water management solutions for farms and agricultural projects.",
+      Icon: Sprout,
+      image: "/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
+    },
+    {
+      title: "Water Engineering",
+      description: "Advanced water engineering services including design, installation, and maintenance of water systems.",
+      Icon: Droplet,
+      image: "/lovable-uploads/8e7fb609-f622-499a-8708-daf14795c28c.png"
+    }
   ];
 
   return (
