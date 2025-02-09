@@ -1,11 +1,26 @@
+
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout } from "lucide-react";
 import { useState, useEffect } from "react";
 
+interface Bubble {
+  left: string;
+  width: string;
+  height: string;
+  animationDelay: string;
+}
+
+interface Service {
+  title: string;
+  description: string;
+  image: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
 const Index = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [bubbles, setBubbles] = useState([]);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
   useEffect(() => {
     setBubbles([...Array(20)].map(() => ({
@@ -18,13 +33,19 @@ const Index = () => {
 
   const toggleSound = () => {
     setIsPlaying(!isPlaying);
-    const audio = document.getElementById("water-sound");
-    if (audio instanceof HTMLAudioElement) {
-      isPlaying ? audio.pause() : audio.play();
+    const audio = document.getElementById("water-sound") as HTMLAudioElement | null;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play().catch(error => {
+          console.log("Audio playback failed:", error);
+        });
+      }
     }
   };
 
-  const services = [
+  const services: Service[] = [
     { title: "Water Supply", description: "Reliable water solutions", image: "/images/water.jpg", icon: Droplet },
     { title: "Building Solutions", description: "Construction services", image: "/images/building.jpg", icon: Building2 },
     { title: "Industrial Supply", description: "Factory-grade solutions", image: "/images/factory.jpg", icon: Factory },
@@ -57,6 +78,7 @@ const Index = () => {
         <button 
           onClick={toggleSound}
           className="fixed bottom-4 right-4 p-3 rounded-full bg-primary/20 hover:bg-primary/30 transition-colors"
+          aria-label={isPlaying ? "Mute sound" : "Unmute sound"}
         >
           {isPlaying ? "🔊" : "🔇"}
         </button>
@@ -77,7 +99,7 @@ const Index = () => {
                 <div className="p-6 sm:p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-primary/10 rounded-xl">
-                      {React.createElement(service.icon, { className: "text-primary h-8 w-8" })}
+                      <service.icon className="text-primary h-8 w-8" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">
                       {service.title}
