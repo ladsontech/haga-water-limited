@@ -1,25 +1,25 @@
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Droplet, Building2, Factory, Sprout, Trophy, Phone, Clock, Shield, Star } from "lucide-react";
+import { Droplet, Building2, Factory, Sprout, Trophy, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const services = [
     {
-      title: "Domestic",
-      description: "Expert plumbing solutions for homes and residential properties, ensuring comfort and safety for your family.",
+      title: "Domestic Plumbing",
+      description: "Centers on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and reusing rainwater for gardens or household needs). Focuses on water conservation through low-flow fixtures and leak repair.",
       Icon: Building2,
       image: "/lovable-uploads/6679d361-17df-4a56-ad5b-d4f7f985c63a.png"
     },
     {
-      title: "Commercial",
-      description: "Comprehensive plumbing services for businesses, offices, and commercial establishments.",
+      title: "Commercial Plumbing",
+      description: "Supports water and sanitation infrastructure for businesses, providing durable sanitary products (faucets, toilets) and maintaining water supply/drainage systems. Ensures compliance with hygiene standards and water efficiency in high-traffic environments.",
       Icon: Factory,
       image: "/lovable-uploads/741d7779-e196-4d5c-8d6e-704e173e5100.png"
     },
     {
-      title: "Agricultural",
-      description: "Specialized irrigation and water management solutions for farms and agricultural projects.",
+      title: "Industrial Plumbing",
+      description: "Addresses large-scale water management, including treatment (filtering, recycling wastewater) and irrigation systems (drip/sprinkler networks for agriculture or landscaping). Emphasizes durable pipelines and eco-friendly practices to reduce water waste.",
       Icon: Sprout,
       image: "/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
     },
@@ -34,7 +34,7 @@ const Index = () => {
   const features = [
     {
       icon: Trophy,
-      title: "25+ Years Experience",
+      title: "We have been in Existence since 2022",
       description: "Trusted by thousands of clients"
     },
     {
