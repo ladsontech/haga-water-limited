@@ -31,7 +31,18 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-water-gradient">
+    <div className="relative min-h-screen bg-water-gradient">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-50 z-[-1]"
+      >
+        <source src="/lovable-uploads/waterfountain.mp4" type="video/mp4" />
+      </video>
+
       <Hero />
       
       {/* Services Section */}
