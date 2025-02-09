@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <img 
-              src="/lovable-uploads/4f17371f-4ef0-4656-875b-ae4ee6bd3b09.png" 
+              src="/lovable-uploads/logo.png" 
               alt="Haga Water Limited Logo" 
               className="h-40 sm:h-48 w-auto"
             />
