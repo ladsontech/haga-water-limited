@@ -39,7 +39,7 @@ const Index = () => {
         {/* Decorative Image Section */}
         <div className="relative max-w-5xl mx-auto my-12">
           <img 
-            src="/lovable-uploads/c679483b-e4d8-4326-b013-b79a7ceec1b3.png"
+            src="/lovable-uploads/ef7f6d0a-d5f1-4a8f-b8ac-b311ed038668.png"
             alt="Water knows us"
             className="w-full h-[300px] object-cover rounded-lg shadow-xl"
           />
