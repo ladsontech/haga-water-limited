@@ -1,8 +1,14 @@
-
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout, Trophy, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Index = () => {
   const services = [
@@ -10,25 +16,40 @@ const Index = () => {
       title: "Domestic Plumbing",
       description: "Focuses on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and storing rainwater for household use). Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
-      image: "/images/repairingdomesticsink.png"
+      images: [
+        "/images/repairingdomesticsink.png",
+        "/images/domestic_toilet.jpg",
+        "/images/stainlesssink.png"
+      ]
     },
     {
       title: "Commercial Plumbing",
       description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products (touchless faucets, commercial toilets) and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
       Icon: Factory,
-      image: "/images/Sanitary Fittings Manufacturer.jpg"
+      images: [
+        "/images/Sanitary Fittings Manufacturer.jpg",
+        "/images/washroomsink.jpg",
+        "/images/urinal.png"
+      ]
     },
     {
       title: "Industrial Plumbing",
       description: "Specializes in large-scale water solutions, including water treatment (filtering, recycling wastewater) and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
-      image: "/images/watertank.jpg"
+      images: [
+        "/images/watertank.jpg",
+        "/images/wallpipes.jpg",
+        "/images/biodigester.png"
+      ]
     },
     {
       title: "Water Irrigation Systems",
       description: "Dedicated to designing, installing, and maintaining custom irrigation solutions for:\n\nResidential Gardens: Drip irrigation, sprinklers, and rainwater-fed systems.\n\nCommercial Landscapes: Automated or manual systems for parks, campuses, or commercial complexes.",
       Icon: Droplet,
-      image: "/images/irrigation.png"
+      images: [
+        "/images/irrigation.png",
+        "/images/general.jpeg"
+      ]
     }
   ];
 
@@ -84,11 +105,23 @@ const Index = () => {
                   <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
                 </div>
                 <div className="relative h-96">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="absolute inset-0 w-full h-full object-contain bg-gray-100"
-                  />
+                  <Carousel className="w-full">
+                    <CarouselContent>
+                      {service.images.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <div className="h-96">
+                            <img 
+                              src={image} 
+                              alt={`${service.title} - Image ${index + 1}`}
+                              className="w-full h-full object-contain bg-gray-100"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </Carousel>
                 </div>
               </div>
             ))}
