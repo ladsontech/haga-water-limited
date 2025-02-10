@@ -83,11 +83,11 @@ const Index = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
                 </div>
-                <div className="relative h-48 sm:h-64">
+                <div className="relative h-96">
                   <img 
                     src={service.image} 
                     alt={service.title} 
-                    className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    className="absolute inset-0 w-full h-full object-contain bg-gray-100"
                   />
                 </div>
               </div>

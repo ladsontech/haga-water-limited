@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 
 const FinishedProject = () => {
@@ -55,21 +56,16 @@ const FinishedProject = () => {
       category: "Pipe line Maintenances",
       alt: "Pipe line Repair"
     },
-
     {
       src: "/images/lady_watertank.jpg",
       category: "water tank installation",
       alt: "Installing water reservoir"
     }
-
-
-    
-
   ];
 
   return (
     <div className="container mx-auto px-4 py-8 bg-water-gradient min-h-screen">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold text-primary mb-8 text-center">Our Finished Projects</h1>
         
         {/* Project List */}
@@ -91,17 +87,17 @@ const FinishedProject = () => {
         {/* Project Images Section */}
         <div className="mt-16">
           <h2 className="text-2xl font-semibold text-primary-dark mb-8 text-center">Plumbers at Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectImages.map((image) => (
               <div key={image.category} className="flex flex-col items-center">
-                <div className="w-full h-48 overflow-hidden rounded-lg">
+                <div className="w-full h-[600px] overflow-hidden rounded-lg bg-white shadow-lg">
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="text-sm text-primary font-medium mt-2">{image.category}</p>
+                <p className="text-lg text-primary font-medium mt-4">{image.category}</p>
               </div>
             ))}
           </div>
