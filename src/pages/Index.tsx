@@ -16,7 +16,7 @@ const Index = () => {
       title: "Commercial Plumbing",
       description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products (touchless faucets, commercial toilets) and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
       Icon: Factory,
-      image: "/images/Sanitary Fittings Manufacturer.jpg.png"
+      image: "/images/Sanitary Fittings Manufacturer.jpg"
     },
     {
       title: "Industrial Plumbing",
