@@ -46,12 +46,12 @@ const FinishedProject = () => {
       alt: "Bio Digester Installation Project"
     },
     {
-      src: "/images/domestictoilet.png",
+      src: "/images/domestic_toilet.png",
       category: "Installing Sanitary appliances in domestic applicances",
       alt: "Domestic Home Installation Project"
     },
     {
-      src: "/images/fultypiperepair.png",
+      src: "/images/faultypiperepair.png",
       category: "Pipe line Maintenances",
       alt: "Pipe line Repair"
     },

@@ -9,37 +9,37 @@ const Shop = () => {
       name: "Modern Toilet Bowl",
       description: "Dual flush water-saving toilet with soft-close seat",
       icon: Toilet,
-      image: "/images/47721987-7060-4846-83b6-5e3bbcb2fb0e.png"
+      image: "/images/toiletbowl.png"
     },
     {
       name: "Squat Toilet",
       description: "Traditional squat toilet with high-quality ceramic finish",
       icon: Toilet,
-      image: "/lovable-uploads/a63888f6-044f-4a83-bf35-10bcb2320701.png"
+      image: "/images/traditiontoilet.png"
     },
     {
       name: "Wall-Mounted Urinal",
       description: "Modern wall-mounted urinal with automatic flush system",
       icon: Bath,
-      image: "/lovable-uploads/741d7779-e196-4d5c-8d6e-704e173e5100.png"
+      image: "/images/urinal.png"
     },
     {
       name: "Flush Cistern",
       description: "Efficient dual-flush cistern mechanism",
       icon: Bath,
-      image: "/lovable-uploads/1187a00e-235f-4fa6-9879-c1c38f69a51a.png"
+      image: "/images/flush.png"
     },
     {
       name: "Kitchen Sink",
       description: "Premium stainless steel kitchen sink with modern faucet",
       icon: Bath,
-      image: "/lovable-uploads/8e7fb609-f622-499a-8708-daf14795c28c.png"
+      image: "/images/stainlesssink.png"
     },
     {
       name: "Washroom Sink",
       description: "Contemporary ceramic washroom sink with mounting hardware",
       icon: Bath,
-      image: "/lovable-uploads/6679d361-17df-4a56-ad5b-d4f7f985c63a.png"
+      image: "/images/washroomsink.png"
     }
   ];
 

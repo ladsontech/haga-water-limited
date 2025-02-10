@@ -16,13 +16,13 @@ const Index = () => {
       title: "Commercial Plumbing",
       description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products (touchless faucets, commercial toilets) and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
       Icon: Factory,
-      image: "/images/741d7779-e196-4d5c-8d6e-704e173e5100.png"
+      image: "/images/Sanitary Fittings Manufacturer.jpg.png"
     },
     {
       title: "Industrial Plumbing",
       description: "Specializes in large-scale water solutions, including water treatment (filtering, recycling wastewater) and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
-      image: "/images/watertank.png"
+      image: "/images/watertank.jpg"
     },
     {
       title: "Water Irrigation Systems",
