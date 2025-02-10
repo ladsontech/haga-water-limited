@@ -1,80 +1,56 @@
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Droplet, Building2, Factory, Sprout, Trophy, Clock, Shield } from "lucide-react";
+import { Droplet, Building2, Factory, Sprout, Trophy, Clock, Shield, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 const Index = () => {
   const services = [
     {
+      title: "General Plumbing",
+      description: "Comprehensive plumbing solutions for homes, businesses, and industries. Includes pipe repairs, leak detection, water system maintenance, and installations to ensure efficient water flow and drainage.",
+      Icon: Wrench,
+      images: ["/images/general.jpg" ]
+    },
+    {
       title: "Domestic Plumbing",
-      description: "Focuses on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and storing rainwater for household use). Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
+      description: "Focuses on residential water systems, including clean water supply, drainage, rainwater harvesting, and biodigester installation for eco-friendly waste management. Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
-      images: [
-        "/images/repairingdomesticsink.png",
-        "/images/domestic_toilet.jpg",
-        "/images/stainlesssink.png"
-      ]
+      images: ["/images/domestic_toilet.jpg", "/images/biodigester1.jpg", "/images/biodigester2.jpg"]
     },
     {
       title: "Commercial Plumbing",
-      description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products (touchless faucets, commercial toilets) and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
+      description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
       Icon: Factory,
-      images: [
-        "/images/Sanitary Fittings Manufacturer.jpg",
-        "/images/washroomsink.jpg",
-        "/images/urinal.png"
-      ]
+      images: ["/images/watertank.jpg"]
     },
     {
       title: "Industrial Plumbing",
-      description: "Specializes in large-scale water solutions, including water treatment (filtering, recycling wastewater) and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
+      description: "Specializes in large-scale water solutions, including water treatment and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
-      images: [
-        "/images/watertank.jpg",
-        "/images/wallpipes.jpg",
-        "/images/biodigester.png"
-      ]
+      images: ["/images/biodigester.png"]
     },
     {
       title: "Water Irrigation Systems",
-      description: "Dedicated to designing, installing, and maintaining custom irrigation solutions for:\n\nResidential Gardens: Drip irrigation, sprinklers, and rainwater-fed systems.\n\nCommercial Landscapes: Automated or manual systems for parks, campuses, or commercial complexes.",
+      description: "Dedicated to designing, installing, and maintaining custom irrigation solutions for residential gardens and commercial landscapes.",
       Icon: Droplet,
-      images: [
-        "/images/irrigation.png",
-        "/images/general.jpeg"
-      ]
+      images: ["/images/irrigation.png"]
     }
   ];
 
   const features = [
-    {
-      icon: Trophy,
-      title: "We have been in Existence since 2022",
-      description: "Trusted by thousands of clients"
-    },
-    {
-      icon: Clock,
-      title: "24/7 Emergency Service",
-      description: "We're here when you need us"
-    },
-    {
-      icon: Shield,
-      title: "Licensed & Insured",
-      description: "Professional certified plumbers"
-    }
+    { icon: Trophy, title: "We have been in Existence since 2022", description: "Trusted by thousands of clients" },
+    { icon: Clock, title: "24/7 Emergency Service", description: "We're here when you need us" },
+    { icon: Shield, title: "Licensed & Insured", description: "Professional certified plumbers" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Hero />
-      
+
       {/* Features Section */}
       <section className="py-8 sm:py-12 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,24 +80,23 @@ const Index = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
                 </div>
-                <div className="relative h-96">
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {service.images.map((image, index) => (
-                        <CarouselItem key={index}>
-                          <div className="h-96">
-                            <img 
-                              src={image} 
-                              alt={`${service.title} - Image ${index + 1}`}
-                              className="w-full h-full object-contain bg-gray-100"
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-2" />
-                    <CarouselNext className="right-2" />
-                  </Carousel>
+                <div className="relative h-48 sm:h-64">
+                  <Swiper
+                    navigation={true}
+                    modules={[Navigation]}
+                    className="h-full"
+                  >
+                    {service.images.map((img, index) => (
+                      <SwiperSlide key={index}>
+                        <img 
+                          src={img} 
+                          alt={`${service.title} ${index + 1}`} 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </Swiper>
                 </div>
               </div>
             ))}
@@ -142,7 +117,7 @@ const Index = () => {
           </Button>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
