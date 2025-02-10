@@ -10,7 +10,7 @@ const Index = () => {
       title: "Domestic Plumbing",
       description: "Focuses on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and storing rainwater for household use). Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
-      image: "/images/a63888f6-044f-4a83-bf35-10bcb2320701.png"
+      image: "/images/repairingdomesticsink.png"
     },
     {
       title: "Commercial Plumbing",
@@ -22,13 +22,13 @@ const Index = () => {
       title: "Industrial Plumbing",
       description: "Specializes in large-scale water solutions, including water treatment (filtering, recycling wastewater) and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
-      image: "/images/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
+      image: "/images/watertank.png"
     },
     {
       title: "Water Irrigation Systems",
       description: "Dedicated to designing, installing, and maintaining custom irrigation solutions for:\n\nResidential Gardens: Drip irrigation, sprinklers, and rainwater-fed systems.\n\nCommercial Landscapes: Automated or manual systems for parks, campuses, or commercial complexes.",
       Icon: Droplet,
-      image: "/images/8e7fb609-f622-499a-8708-daf14795c28c.png"
+      image: "/images/irrigation.png"
     }
   ];
 

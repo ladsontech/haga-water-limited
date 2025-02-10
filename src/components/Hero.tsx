@@ -6,7 +6,7 @@ const Hero = () => {
     <div 
       className="relative h-[90vh] bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/images/ef7f6d0a-d5f1-4a8f-b8ac-b311ed038668.png')`
+        backgroundImage: `url('/images/waterbackground.png')`
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent">

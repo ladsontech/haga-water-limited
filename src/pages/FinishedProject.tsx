@@ -41,17 +41,17 @@ const FinishedProject = () => {
 
   const projectImages = [
     {
-      src: "/images/a7171d6f-4375-4e3b-9f9c-bedf69b413ed.png",
+      src: "/images/biodigester.png",
       category: "Bio Digester Installation",
       alt: "Bio Digester Installation Project"
     },
     {
-      src: "/images/5ae8cefa-229f-4d58-a73a-56db43e9f1b1.png",
+      src: "/images/domestictoilet.png",
       category: "Installing Sanitary appliances in domestic applicances",
       alt: "Domestic Home Installation Project"
     },
     {
-      src: "/images/fe9d00f9-1c8e-4adc-b1f3-9973f453190a.png",
+      src: "/images/fultypiperepair.png",
       category: "Pipe line Maintenances",
       alt: "Pipe line Repair"
     },

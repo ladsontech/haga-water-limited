@@ -9,7 +9,7 @@ const Shop = () => {
       name: "Modern Toilet Bowl",
       description: "Dual flush water-saving toilet with soft-close seat",
       icon: Toilet,
-      image: "/lovable-uploads/47721987-7060-4846-83b6-5e3bbcb2fb0e.png"
+      image: "/images/47721987-7060-4846-83b6-5e3bbcb2fb0e.png"
     },
     {
       name: "Squat Toilet",
