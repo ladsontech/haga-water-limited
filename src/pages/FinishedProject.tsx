@@ -41,20 +41,30 @@ const FinishedProject = () => {
 
   const projectImages = [
     {
-      src: "/lovable-uploads/a7171d6f-4375-4e3b-9f9c-bedf69b413ed.png",
+      src: "/images/a7171d6f-4375-4e3b-9f9c-bedf69b413ed.png",
       category: "Bio Digester Installation",
       alt: "Bio Digester Installation Project"
     },
     {
-      src: "/lovable-uploads/5ae8cefa-229f-4d58-a73a-56db43e9f1b1.png",
+      src: "/images/5ae8cefa-229f-4d58-a73a-56db43e9f1b1.png",
       category: "Installing Sanitary appliances in domestic applicances",
       alt: "Domestic Home Installation Project"
     },
     {
-      src: "/lovable-uploads/fe9d00f9-1c8e-4adc-b1f3-9973f453190a.png",
+      src: "/images/fe9d00f9-1c8e-4adc-b1f3-9973f453190a.png",
       category: "Pipe line Maintenances",
       alt: "Pipe line Repair"
+    },
+
+    {
+      src: "/images/lady_watertank.jpg",
+      category: "water tank installation",
+      alt: "Installing water reservoir"
     }
+
+
+    
+
   ];
 
   return (

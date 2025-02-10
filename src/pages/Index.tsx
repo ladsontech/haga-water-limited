@@ -10,25 +10,25 @@ const Index = () => {
       title: "Domestic Plumbing",
       description: "Focuses on residential water systems, including clean water supply, drainage, and rainwater harvesting (collecting and storing rainwater for household use). Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
-      image: "/lovable-uploads/6679d361-17df-4a56-ad5b-d4f7f985c63a.png"
+      image: "/images/a63888f6-044f-4a83-bf35-10bcb2320701.png"
     },
     {
       title: "Commercial Plumbing",
       description: "Manages water and sanitation infrastructure for businesses, supplying high-traffic sanitary products (touchless faucets, commercial toilets) and maintaining complex water supply/drainage systems. Ensures compliance with hygiene and water efficiency standards.",
       Icon: Factory,
-      image: "/lovable-uploads/741d7779-e196-4d5c-8d6e-704e173e5100.png"
+      image: "/images/741d7779-e196-4d5c-8d6e-704e173e5100.png"
     },
     {
       title: "Industrial Plumbing",
       description: "Specializes in large-scale water solutions, including water treatment (filtering, recycling wastewater) and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
-      image: "/lovable-uploads/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
+      image: "/images/ab9259ef-3a05-4ff1-bec2-79c2fa4ecbb7.png"
     },
     {
       title: "Water Irrigation Systems",
       description: "Dedicated to designing, installing, and maintaining custom irrigation solutions for:\n\nResidential Gardens: Drip irrigation, sprinklers, and rainwater-fed systems.\n\nCommercial Landscapes: Automated or manual systems for parks, campuses, or commercial complexes.",
       Icon: Droplet,
-      image: "/lovable-uploads/8e7fb609-f622-499a-8708-daf14795c28c.png"
+      image: "/images/8e7fb609-f622-499a-8708-daf14795c28c.png"
     }
   ];
 
