@@ -47,7 +47,7 @@ const FinishedProject = () => {
     },
     {
       src: "/images/domestic_toilet.jpg",
-      category: "Installing Sanitary appliances in domestic applicances",
+      category: "Installing domestic sanitary appliances",
       alt: "Domestic Home Installation Project"
     },
     {
