@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/logo.png" 
+                src="/images/logo.png" 
                 alt="Haga Water Limited Logo" 
                 className="h-14 w-auto sm:h-16"
               />
