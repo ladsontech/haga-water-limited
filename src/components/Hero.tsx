@@ -26,9 +26,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 opacity-20 hidden md:block">
-        <Droplet size={300} />
-      </div>
     </div>
   );
 };
