@@ -42,12 +42,12 @@ const FinishedProject = () => {
 
   const projectImages = [
     {
-      src: "/images/biodigesterx.png",
+      src: "/images/biodigesterx.jpg",
       category: "Bio Digester Installation",
       alt: "Bio Digester Installation Project"
     },
     {
-      src: "/images/domestic_toilet.jpg",
+      src: "/images/Haga water installation team.png",
       category: "Installing domestic sanitary appliances",
       alt: "Domestic Home Installation Project"
     },
@@ -60,7 +60,15 @@ const FinishedProject = () => {
       src: "/images/lady_watertank.jpg",
       category: "water tank installation",
       alt: "Installing water reservoir"
+    },
+
+    {
+      src: "/images/biodigest1.jpg",
+      category: "domestic solid and waste water management",
+      alt: "biodigester"
     }
+
+
   ];
 
   return (
