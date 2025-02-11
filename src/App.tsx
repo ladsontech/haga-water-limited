@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -13,8 +14,8 @@ import FinishedProject from "@/pages/FinishedProject";
 
 const App = () => {
   return (
-    <TooltipProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <TooltipProvider>
         <div className="min-h-screen">
           <Navbar />
           <Routes>
@@ -27,10 +28,10 @@ const App = () => {
           </Routes>
           <WhatsAppButton />
         </div>
-      </BrowserRouter>
-      <Toaster />
-      <Sonner />
-    </TooltipProvider>
+        <Toaster />
+        <Sonner />
+      </TooltipProvider>
+    </BrowserRouter>
   );
 };
 
