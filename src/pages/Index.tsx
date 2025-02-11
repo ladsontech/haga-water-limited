@@ -14,13 +14,13 @@ const Index = () => {
       title: "General Plumbing",
       description: "Comprehensive plumbing solutions for homes, businesses, and industries. Includes pipe repairs, leak detection, water system maintenance, and installations to ensure efficient water flow and drainage.",
       Icon: Wrench,
-      images: ["/images/general.jpg" ]
+      images: ["/images/general.jpeg" ]
     },
     {
       title: "Domestic Plumbing",
       description: "Focuses on residential water systems, including clean water supply, drainage, rainwater harvesting, and biodigester installation for eco-friendly waste management. Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
-      images: ["/images/domestic_toilet.jpg", "/images/biodigester1.jpg", "/images/biodigester2.jpg"]
+      images: ["/images/Haga water installtion team.png", "/images/biodigester1.jpg", "/images/biodigester2.jpg"]
     },
     {
       title: "Commercial Plumbing",
