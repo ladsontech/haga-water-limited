@@ -85,7 +85,7 @@ const Index = () => {
           <h2 className="text-2xl sm:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">Our Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {services.map((service) => (
-              <div key={service.title} className="group relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <div key={service.title} className="group relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                 <div className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
                     <service.Icon className="text-blue-600 h-6 w-6 sm:h-8 sm:w-8" />
@@ -93,21 +93,23 @@ const Index = () => {
                   </div>
                   <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
                 </div>
-                <div className="relative h-48 sm:h-72 lg:h-96">
+                <div className="flex-grow">
                   <Swiper
                     navigation={true}
                     modules={[Navigation]}
-                    className="h-full w-full"
-                    slidesPerView={1}
+                    className="w-full"
+                    style={{ height: 'auto' }}
                   >
                     {service.images.map((img, index) => (
-                      <SwiperSlide key={index}>
-                        <img 
-                          src={img} 
-                          alt={`${service.title} ${index + 1}`} 
-                          className="w-full h-full object-cover object-center"
-                          loading="lazy"
-                        />
+                      <SwiperSlide key={index} className="!h-auto">
+                        <div className="w-full">
+                          <img 
+                            src={img} 
+                            alt={`${service.title} ${index + 1}`} 
+                            className="w-full h-auto max-h-[600px] object-contain"
+                            loading="lazy"
+                          />
+                        </div>
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -138,3 +140,4 @@ const Index = () => {
 };
 
 export default Index;
+
