@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout, Trophy, Clock, Shield, Wrench } from "lucide-react";
@@ -96,7 +97,6 @@ const Index = () => {
                       </SwiperSlide>
                     ))}
                   </Swiper>
-                </Swiper>
                 </div>
               </div>
             ))}
