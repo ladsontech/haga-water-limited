@@ -47,7 +47,7 @@ const FinishedProject = () => {
       alt: "Bio Digester Installation Project"
     },
     {
-      src: "/images/Haga water installation team.png",
+      src: "/images/Haga water installtion team.png",
       category: "Installing domestic sanitary appliances",
       alt: "Domestic Home Installation Project"
     },
