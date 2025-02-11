@@ -53,15 +53,15 @@ const Index = () => {
       <Hero />
 
       {/* Features Section */}
-      <section className="py-8 sm:py-12 bg-white/80 backdrop-blur-sm">
+      <section className="py-6 sm:py-12 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 p-4 sm:p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <feature.icon className="w-12 h-12 text-blue-600 flex-shrink-0" />
+              <div key={index} className="flex flex-col sm:flex-row items-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <feature.icon className="w-10 h-10 sm:w-12 sm:h-12 text-blue-600 mb-3 sm:mb-0 sm:mr-4 flex-shrink-0" />
                 <div className="text-center sm:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                  <p className="text-sm text-gray-600">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -70,29 +70,32 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-8 sm:py-12">
+      <section className="py-6 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-600 mb-8">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center text-blue-600 mb-6 sm:mb-8">Our Services</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {services.map((service) => (
-              <div key={service.title} className="group relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <div key={service.title} className="group relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="p-4 sm:p-6">
-                  <service.Icon className="text-blue-600 h-8 w-8 mb-4" />
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
+                  <div className="flex items-center mb-4">
+                    <service.Icon className="text-blue-600 h-6 w-6 sm:h-8 sm:w-8" />
+                    <h3 className="text-lg sm:text-2xl font-bold text-gray-900 ml-3">{service.title}</h3>
+                  </div>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
                 </div>
-                <div className="relative h-48 sm:h-64">
+                <div className="relative h-40 sm:h-64">
                   <Swiper
                     navigation={true}
                     modules={[Navigation]}
-                    className="h-full"
+                    className="h-full w-full"
+                    slidesPerView={1}
                   >
                     {service.images.map((img, index) => (
                       <SwiperSlide key={index}>
                         <img 
                           src={img} 
                           alt={`${service.title} ${index + 1}`} 
-                          className="absolute inset-0 w-full h-full object-cover"
+                          className="w-full h-full object-cover"
                         />
                       </SwiperSlide>
                     ))}
@@ -107,11 +110,11 @@ const Index = () => {
       {/* Emergency Call Section */}
       <section className="py-8 sm:py-16 bg-blue-600 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">24/7 Emergency Plumbing Services</h2>
-          <p className="text-lg sm:text-xl text-blue-100 mb-6">Don't wait until it's too late. Contact us now!</p>
+          <h2 className="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">24/7 Emergency Plumbing Services</h2>
+          <p className="text-base sm:text-xl text-blue-100 mb-4 sm:mb-6">Don't wait until it's too late. Contact us now!</p>
           <Button 
             variant="secondary"
-            className="bg-white text-blue-600 hover:bg-blue-50 transition-colors duration-300 text-base sm:text-lg px-6 py-3"
+            className="bg-white text-blue-600 hover:bg-blue-50 transition-colors duration-300 text-sm sm:text-lg px-4 sm:px-6 py-2 sm:py-3"
           >
             Call Now: +256 755 694 693
           </Button>
