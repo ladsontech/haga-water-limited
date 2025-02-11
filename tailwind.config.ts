@@ -68,7 +68,23 @@ export default {
         ripple: "ripple 1s linear infinite",
         wave: "wave 8s linear infinite",
       },
+      textShadow: {
+        DEFAULT: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        'lg': '3px 3px 6px rgba(0, 0, 0, 0.75)',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: { addUtilities: Function }) {
+      addUtilities({
+        '.text-shadow': {
+          'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-lg': {
+          'text-shadow': '3px 3px 6px rgba(0, 0, 0, 0.75)',
+        },
+      });
+    },
+  ],
 } satisfies Config;
