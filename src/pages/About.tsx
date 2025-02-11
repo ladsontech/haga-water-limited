@@ -6,7 +6,7 @@ const About = () => {
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
           <div>
             <p className="text-sm sm:text-base text-gray-700">
-              Haga Water Limited is a service-oriented company established by Ugandan Water Engineers with a vision to become the most reliable, creative, and transparent service provider in the plumbing and water solutions industry. Founded two years ago, we specialize in delivering high-quality plumbing services, water treatment solutions, and civil works for general, domestic, commercial, and industrial projects.
+              Haga Water Limited is a service-oriented company established by Ugandan Water Engineers with a vision to become the most reliable, creative, and transparent service provider in the plumbing and water solutions industry. Founded in 2022, we specialize in delivering high-quality plumbing services, water treatment solutions, and civil works for general, domestic, commercial, and industrial projects.
             </p>
           </div>
 
