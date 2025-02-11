@@ -42,7 +42,7 @@ const FinishedProject = () => {
 
   const projectImages = [
     {
-      src: "/images/biodigesterx.jpg",
+      src: "/images/biodigesterman.png",
       category: "Bio Digester Installation",
       alt: "Bio Digester Installation Project"
     },
@@ -63,7 +63,7 @@ const FinishedProject = () => {
     },
 
     {
-      src: "/images/biodigest1.jpg",
+      src: "/images/biodigester1.jpg",
       category: "domestic solid and waste water management",
       alt: "biodigester"
     }
