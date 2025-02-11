@@ -21,7 +21,7 @@ const Index = () => {
       title: "Domestic Plumbing",
       description: "Focuses on residential water systems, including clean water supply, drainage, rainwater harvesting, and biodigester installation for eco-friendly waste management. Emphasizes water conservation through low-flow fixtures, leak detection, and efficient water heaters.",
       Icon: Building2,
-      images: ["/images/Haga water installtion team.png", "/images/biodigester1.jpg", "/images/biodigester2.jpg"]
+      images: ["/images/Haga water installtion team.png", "/images/traditiontoilet.png", "/images/washroomsink.png"]
     },
     {
       title: "Commercial Plumbing",
@@ -33,7 +33,7 @@ const Index = () => {
       title: "Industrial Plumbing",
       description: "Specializes in large-scale water solutions, including water treatment and durable pipeline systems for factories, farms, or municipalities. Prioritizes eco-friendly practices and regulatory compliance.",
       Icon: Sprout,
-      images: ["/images/biodigester.png"]
+      images: ["/images/biodigesterman.png"]
     },
     {
       title: "Water Irrigation Systems",
