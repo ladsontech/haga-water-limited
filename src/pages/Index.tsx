@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   const services = [
@@ -50,6 +51,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <Helmet>
+        <title>Haga Water Limited - Professional Plumbing & Water Solutions</title>
+        <meta name="description" content="Leading provider of plumbing services, water treatment solutions, and irrigation systems in Uganda. Quality service since 2022." />
+        <meta name="keywords" content="plumbing services, water treatment, irrigation systems, Uganda plumbing, Haga Water, professional plumbers" />
+        <meta property="og:title" content="Haga Water Limited - Professional Plumbing & Water Solutions" />
+        <meta property="og:description" content="Expert plumbing services and water solutions in Uganda. Commercial, industrial, and residential services available." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       <Hero />
 
       {/* Features Section */}
@@ -83,7 +93,7 @@ const Index = () => {
                   </div>
                   <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
                 </div>
-                <div className="relative h-40 sm:h-64">
+                <div className="relative h-48 sm:h-72 lg:h-96">
                   <Swiper
                     navigation={true}
                     modules={[Navigation]}
@@ -95,7 +105,8 @@ const Index = () => {
                         <img 
                           src={img} 
                           alt={`${service.title} ${index + 1}`} 
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover object-center"
+                          loading="lazy"
                         />
                       </SwiperSlide>
                     ))}

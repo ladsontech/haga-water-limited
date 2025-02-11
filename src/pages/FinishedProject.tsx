@@ -1,5 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Helmet } from "react-helmet";
 
 const FinishedProject = () => {
   const projects = [
@@ -73,6 +74,14 @@ const FinishedProject = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 bg-water-gradient min-h-screen">
+      <Helmet>
+        <title>Our Finished Projects - Haga Water Limited</title>
+        <meta name="description" content="Explore our portfolio of completed plumbing and water treatment projects across Uganda, including installations at Hotel Lafesa and various MBN Labs locations." />
+        <meta name="keywords" content="completed projects, water treatment installations, plumbing projects, Uganda plumbing projects" />
+        <meta property="og:title" content="Completed Projects - Haga Water Limited" />
+        <meta property="og:description" content="View our successful plumbing and water treatment installations across Uganda." />
+      </Helmet>
+
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold text-primary mb-8 text-center">Our Finished Projects</h1>
         
@@ -98,11 +107,12 @@ const FinishedProject = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectImages.map((image) => (
               <div key={image.category} className="flex flex-col items-center">
-                <div className="w-full h-[600px] overflow-hidden rounded-lg bg-white shadow-lg">
+                <div className="w-full aspect-square max-h-[600px] overflow-hidden rounded-lg bg-white shadow-lg">
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-lg text-primary font-medium mt-4">{image.category}</p>
