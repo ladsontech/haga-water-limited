@@ -55,12 +55,22 @@ const FinishedProject = () => {
   ];
 
   const biodigesterImages = [
-    // This array will be populated with your five biodigester images
-    // Example structure:
-    // {
-    //   src: "/images/biodigester-image1.jpg",
-    //   alt: "Biodigester Installation Process 1"
-    // }
+    {
+      src: "/images/biodigester.png",
+      alt: "Biodigester System Installation"
+    },
+    {
+      src: "/images/biodigester1.jpg",
+      alt: "Biodigester Construction Process"
+    },
+    {
+      src: "/images/biodigester2.jpg",
+      alt: "Complete Biodigester Setup"
+    },
+    {
+      src: "/images/biodigesterman.png",
+      alt: "Biodigester Installation Team at Work"
+    }
   ];
 
   return (
