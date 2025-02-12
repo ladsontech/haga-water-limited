@@ -1,10 +1,11 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet";
 
 const FinishedProject = () => {
   const projects = [
     {
-      name: "Hotel Lafesa",
+      name: "Hotel Lafresa",
       location: "Kampala",
       description: "One of Uganda's premier five-star hotels where we completed comprehensive plumbing installations including septic tank construction, manhole building with covers, and installation of sanitary appliances throughout all rooms.",
     },
@@ -53,12 +54,21 @@ const FinishedProject = () => {
     }
   ];
 
+  const biodigesterImages = [
+    // This array will be populated with your five biodigester images
+    // Example structure:
+    // {
+    //   src: "/images/biodigester-image1.jpg",
+    //   alt: "Biodigester Installation Process 1"
+    // }
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8 bg-water-gradient min-h-screen">
       <Helmet>
         <title>Our Finished Projects - Haga Water Limited</title>
         <meta name="description" content="Explore our portfolio of completed plumbing and water treatment projects across Uganda, including installations at Hotel Lafesa and various MBN Labs locations." />
-        <meta name="keywords" content="completed projects, water treatment installations, plumbing projects, Uganda plumbing projects" />
+        <meta name="keywords" content="completed projects, water treatment installations, plumbing projects, Uganda plumbing projects, biodigester installation" />
         <meta property="og:title" content="Completed Projects - Haga Water Limited" />
         <meta property="og:description" content="View our successful plumbing and water treatment installations across Uganda." />
       </Helmet>
@@ -82,7 +92,29 @@ const FinishedProject = () => {
           ))}
         </div>
 
-        {/* Project Images Section */}
+        {/* Biodigester Installations Section */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-2xl font-semibold text-primary-dark mb-8 text-center">Biodigester Installations</h2>
+          <Card className="bg-white/80 backdrop-blur-sm p-6">
+            <p className="text-gray-700 mb-6">
+              Our specialized biodigester installation services provide environmentally friendly waste management solutions. We offer complete installation, maintenance, and support services for both residential and commercial properties.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {biodigesterImages.map((image, index) => (
+                <div key={index} className="aspect-square w-full rounded-lg overflow-hidden shadow-lg bg-white">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+
+        {/* General Project Images Section */}
         <div className="mt-16">
           <h2 className="text-2xl font-semibold text-primary-dark mb-8 text-center">Plumbers at Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
