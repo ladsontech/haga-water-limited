@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet";
 
@@ -7,37 +6,22 @@ const FinishedProject = () => {
     {
       name: "Hotel Lafesa",
       location: "Kampala",
-      description: "Complete water treatment and management system installation for Hotel Lafesa, ensuring clean and sustainable water supply for guests and operations.",
+      description: "One of Uganda's premier five-star hotels where we completed comprehensive plumbing installations including septic tank construction, manhole building with covers, and installation of sanitary appliances throughout all rooms.",
     },
     {
-      name: "Healing Way Diagnostic Special",
-      location: "Bugolobi",
-      description: "water treatment plant.",
-    },
-    {
-      name: "MBN Labs - Kampala",
-      location: "Central Kampala",
-      description: "Advanced laboratory facility in Kampala equipped with cutting-edge water testing and analysis capabilities, serving the greater Kampala metropolitan area.",
-    },
-    {
-      name: "MBN Labs - Jinja",
-      location: "Jinja City",
-      description: "Specialized water quality testing facility serving the Jinja region with modern analytical equipment and comprehensive water quality assessments."
+      name: "MBN Labs Network",
+      location: "Multiple Locations",
+      description: "Comprehensive drainage system management and installation of specialized laboratory facilities across multiple branches including Kampala (Main Branch), Jinja, Gulu, Lira, Mukono, Luwero, Mbarara, Mbale, and Nebbi. Installations included laboratory sinks, specialized lab taps, and complete drainage systems.",
     },
     {
       name: "African Bio Labs",
-      location: "Jinja City",
-      description: "Specialized water quality testing facility serving the Jinja region with modern analytical equipment and comprehensive water quality assessments."
+      location: "Kampala",
+      description: "Collaborated on a comprehensive water management project including water tank installation for storage reserves, rainwater harvesting systems implementation, and water treatment solutions.",
     },
     {
-      name: "MBN Labs - Mbarara",
-      location: "Mbarara City",
-      description: "State-of-the-art laboratory in Mbarara providing comprehensive water analysis services for the western region of Uganda."
-    },
-    {
-      name: "MBN Labs - Mbale",
-      location: "Mbale City",
-      description: "Modern water testing facility equipped with the latest technology to serve the eastern region, ensuring water quality standards are met."
+      name: "Single Life Apartments - Komamboga",
+      location: "Komamboga",
+      description: "Complete plumbing infrastructure project including washroom water supply pipework, drainage systems, septic tank construction, and water tank installation with elevated stand construction for apartment-wide water supply.",
     }
   ];
 
@@ -59,17 +43,14 @@ const FinishedProject = () => {
     },
     {
       src: "/images/lady_watertank.jpg",
-      category: "water tank installation",
+      category: "Water Tank Installation",
       alt: "Installing water reservoir"
     },
-
     {
       src: "/images/biodigester1.jpg",
-      category: "domestic solid and waste water management",
-      alt: "biodigester"
+      category: "Domestic Solid and Waste Water Management",
+      alt: "Biodigester Installation"
     }
-
-
   ];
 
   return (
