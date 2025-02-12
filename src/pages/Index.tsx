@@ -44,7 +44,7 @@ const Index = () => {
   ];
 
   const features = [
-    { icon: Trophy, title: "We have been in Existence since 2022", description: "Trusted by thousands of clients" },
+    { icon: Trophy, title: "We have been in Existence since November 2021", description: "Trusted by thousands of clients" },
     { icon: Clock, title: "24/7 Emergency Service", description: "We're here when you need us" },
     { icon: Shield, title: "Licensed & Insured", description: "Professional certified plumbers" }
   ];

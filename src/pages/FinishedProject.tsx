@@ -56,19 +56,19 @@ const FinishedProject = () => {
 
   const biodigesterImages = [
     {
-      src: "/images/biodigester.png",
+      src: "/images/bio1.jpg",
       alt: "Biodigester System Installation"
     },
     {
-      src: "/images/biodigester1.jpg",
+      src: "/images/bio3.jpg",
       alt: "Biodigester Construction Process"
     },
     {
-      src: "/images/biodigester2.jpg",
+      src: "/images/bio4.jpg",
       alt: "Complete Biodigester Setup"
     },
     {
-      src: "/images/biodigesterman.png",
+      src: "/images/biodigester1.jpg",
       alt: "Biodigester Installation Team at Work"
     }
   ];
