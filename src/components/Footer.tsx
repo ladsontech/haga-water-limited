@@ -24,9 +24,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Logo Section */}
-          <div className="flex flex-col items-center md:items-start space-y-4 text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start space-y-4">
             <img src="/images/logo.png" alt="Haga Water Limited Logo" className="h-40 sm:h-48 w-auto" />
-            <p className="text-sm text-gray-600 max-w-xs">Your trusted partner for all plumbing and water-related needs.</p>
+            <p className="text-sm text-gray-600 text-center md:text-left max-w-xs">
+              Your trusted partner for all plumbing and water-related needs.
+            </p>
           </div>
 
           {/* Navigation Menu */}
@@ -45,18 +47,23 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
+          <div className="flex flex-col items-center md:items-start space-y-4 w-full">
             <h3 className="text-base sm:text-lg font-semibold text-primary">Contact Us</h3>
-            <div className="flex flex-col gap-3 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-start gap-3 w-full">
-                  {info.icon}
-                  <div className="flex flex-col w-full">
-                    <span className="text-sm text-gray-500 font-medium">{info.label}</span>
-                    <a href={info.link} target={info.link !== "#" ? "_blank" : undefined} rel={info.link !== "#" ? "noopener noreferrer" : undefined} className="text-gray-600 hover:text-primary transition-colors text-sm sm:text-base break-words">
-                      {info.value}
-                    </a>
+                <div key={index} className="flex items-center gap-2 w-full">
+                  <div className="text-sm text-gray-500 whitespace-nowrap w-1/2 flex items-center gap-2">
+                    {info.icon}
+                    {info.label}:
                   </div>
+                  <a
+                    href={info.link}
+                    target={info.link !== "#" ? "_blank" : undefined}
+                    rel={info.link !== "#" ? "noopener noreferrer" : undefined}
+                    className="text-gray-600 hover:text-primary transition-colors text-sm sm:text-base break-words w-1/2"
+                  >
+                    {info.value}
+                  </a>
                 </div>
               ))}
             </div>
@@ -64,7 +71,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
-          <p className="text-center text-xs sm:text-sm text-gray-500">© {new Date().getFullYear()} Haga Water Limited. All rights reserved.</p>
+          <p className="text-center text-xs sm:text-sm text-gray-500">
+            © {new Date().getFullYear()} Haga Water Limited. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
