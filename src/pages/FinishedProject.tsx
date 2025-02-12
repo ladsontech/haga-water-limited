@@ -10,7 +10,7 @@ const FinishedProject = () => {
       description: "One of Uganda's premier five-star hotels where we completed comprehensive plumbing installations including septic tank construction, manhole building with covers, and installation of sanitary appliances throughout all rooms.",
     },
     {
-      name: "MBN Labs Network",
+      name: "MBN Labs",
       location: "Multiple Locations",
       description: "Comprehensive drainage system management and installation of specialized laboratory facilities across multiple branches including Kampala (Main Branch), Jinja, Gulu, Lira, Mukono, Luwero, Mbarara, Mbale, and Nebbi. Installations included laboratory sinks, specialized lab taps, and complete drainage systems.",
     },
