@@ -129,7 +129,7 @@ const Index = () => {
             variant="secondary"
             className="bg-white text-blue-600 hover:bg-blue-50 transition-colors duration-300 text-sm sm:text-lg px-4 sm:px-6 py-2 sm:py-3"
           >
-            Call Now: +256 755 694 693
+            Call Now: +256 780 488 580
           </Button>
         </div>
       </section>
