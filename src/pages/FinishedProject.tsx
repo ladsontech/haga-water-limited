@@ -48,7 +48,7 @@ const FinishedProject = () => {
       alt: "Installing water reservoir"
     },
     {
-      src: "/images/biodigester1.jpg",
+      src: "/images/ladybio.jpg",
       category: "Domestic Solid and Waste Water Management",
       alt: "Biodigester Installation"
     }
@@ -68,7 +68,11 @@ const FinishedProject = () => {
       alt: "Complete Biodigester Setup"
     },
     {
-      src: "/images/biodigester1.jpg",
+      src: "/images/bio.jpg",
+      alt: "Biodigester Installation Team at Work"
+    },
+    {
+      src: "/images/bio2.jpg",
       alt: "Biodigester Installation Team at Work"
     }
   ];
