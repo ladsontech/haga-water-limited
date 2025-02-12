@@ -87,18 +87,18 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <h3 className="text-base sm:text-lg font-semibold text-primary">Contact Us</h3>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-full">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex flex-col">
-                  <span className="text-sm text-gray-500">{info.label}</span>
+                <div key={index} className="flex items-center justify-between w-full gap-2">
+                  <span className="text-sm text-gray-500 whitespace-nowrap">{info.label}:</span>
                   <a
                     href={info.link}
                     target={info.link !== "#" ? "_blank" : undefined}
                     rel={info.link !== "#" ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors text-sm sm:text-base"
+                    className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors text-sm sm:text-base text-right"
                   >
                     {info.icon}
-                    <span className="break-all">{info.value}</span>
+                    <span className="break-words">{info.value}</span>
                   </a>
                 </div>
               ))}
