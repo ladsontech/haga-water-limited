@@ -62,7 +62,7 @@ const About = () => {
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">Our Projects & Partnerships</h2>
             <p className="text-sm sm:text-base text-gray-700">
-              We are proud to work with both Government and Non-Government Organizations (NGOs) on various water infrastructure and sanitation projects. Our experience includes collaborating with local government authorities, international development agencies, and community-based organizations to implement sustainable water solutions across Uganda. These partnerships have enabled us to contribute significantly to improving water access and sanitation in both urban and rural areas.
+              Haga Water Limited works not only with NGOs but also with individuals and communities throughout Uganda, undertaking projects of all sizes. Our commitment to excellence remains consistent whether we're working on large-scale institutional projects or individual residential installations. We are proud to work with both Government and Non-Government Organizations (NGOs) on various water infrastructure and sanitation projects. Our experience includes collaborating with local government authorities, international development agencies, and community-based organizations to implement sustainable water solutions across Uganda. These partnerships have enabled us to contribute significantly to improving water access and sanitation in both urban and rural areas.
             </p>
           </div>
 

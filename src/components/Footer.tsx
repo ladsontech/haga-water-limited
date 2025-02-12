@@ -1,3 +1,4 @@
+
 import { Mail, Phone, Globe, Home, Users, Briefcase, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
@@ -11,10 +12,42 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <Phone className="w-4 h-4" />, label: "+256 787 556897", link: "tel:+256787556897" },
-    { icon: <Mail className="w-4 h-4" />, label: "hagawater11@gmail.com", link: "mailto:hagawater11@gmail.com" },
-    { icon: <Globe className="w-4 h-4" />, label: "Spot Complex, Kasangati, Kampala", link: "https://maps.google.com/maps?q=Spot+Complex,+Kasangati,+Kampala" },
-    { icon: <Mail className="w-4 h-4" />, label: "P.O. Box 108195 Kampala", link: "#" },
+    { 
+      icon: <Phone className="w-4 h-4" />, 
+      label: "Company Director", 
+      value: "+256 780 498580",
+      link: "tel:+256780498580" 
+    },
+    { 
+      icon: <Phone className="w-4 h-4" />, 
+      label: "Customer Care", 
+      value: "+256 787 556897",
+      link: "tel:+256787556897" 
+    },
+    { 
+      icon: <Phone className="w-4 h-4" />, 
+      label: "WhatsApp", 
+      value: "+256 755 694693",
+      link: "https://wa.me/256755694693" 
+    },
+    { 
+      icon: <Mail className="w-4 h-4" />, 
+      label: "Email", 
+      value: "hagawater11@gmail.com",
+      link: "mailto:hagawater11@gmail.com" 
+    },
+    { 
+      icon: <Globe className="w-4 h-4" />, 
+      label: "Location", 
+      value: "Spot Complex, Kasangati, Kampala",
+      link: "https://maps.google.com/maps?q=Spot+Complex,+Kasangati,+Kampala" 
+    },
+    { 
+      icon: <Mail className="w-4 h-4" />, 
+      label: "Postal Address", 
+      value: "P.O. Box 108195 Kampala",
+      link: "#" 
+    },
   ];
 
   return (
@@ -56,20 +89,21 @@ const Footer = () => {
             <h3 className="text-base sm:text-lg font-semibold text-primary">Contact Us</h3>
             <div className="flex flex-col gap-3">
               {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.link}
-                  target={info.link !== "#" ? "_blank" : undefined}
-                  rel={info.link !== "#" ? "noopener noreferrer" : undefined}
-                  className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors text-sm sm:text-base"
-                >
-                  {info.icon}
-                  <span className="break-all">{info.label}</span>
-                </a>
+                <div key={index} className="flex flex-col">
+                  <span className="text-sm text-gray-500">{info.label}</span>
+                  <a
+                    href={info.link}
+                    target={info.link !== "#" ? "_blank" : undefined}
+                    rel={info.link !== "#" ? "noopener noreferrer" : undefined}
+                    className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors text-sm sm:text-base"
+                  >
+                    {info.icon}
+                    <span className="break-all">{info.value}</span>
+                  </a>
+                </div>
               ))}
             </div>
           </div>
-
         </div>
 
         <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
