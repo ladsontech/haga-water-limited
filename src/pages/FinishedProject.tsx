@@ -71,10 +71,7 @@ const FinishedProject = () => {
       src: "/images/bio.jpg",
       alt: "Biodigester Installation Team at Work"
     },
-    {
-      src: "/images/bio2.jpg",
-      alt: "Biodigester Installation Team at Work"
-    }
+   
   ];
 
   return (
