@@ -1,8 +1,11 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import ImageModal from "@/components/ImageModal";
 
 const FinishedProject = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   const projects = [
     {
       name: "Hotel Lafresa",
@@ -116,8 +119,9 @@ const FinishedProject = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity"
                     loading="lazy"
+                    onClick={() => setSelectedImage(image)}
                   />
                 </div>
               ))}
@@ -135,8 +139,9 @@ const FinishedProject = () => {
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity"
                     loading="lazy"
+                    onClick={() => setSelectedImage(image)}
                   />
                 </div>
                 <p className="text-lg text-primary font-medium mt-4">{image.category}</p>
@@ -145,6 +150,16 @@ const FinishedProject = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+        />
+      )}
     </div>
   );
 };

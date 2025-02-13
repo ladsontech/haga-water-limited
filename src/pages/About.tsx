@@ -1,4 +1,10 @@
+
+import { useState } from "react";
+import ImageModal from "@/components/ImageModal";
+
 const About = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <div className="min-h-screen bg-gray-50 py-6 sm:py-8 md:py-12">
       <div className="max-w-4xl mx-auto px-4">
@@ -16,7 +22,11 @@ const About = () => {
               <img 
                 src="/lovable-uploads/6b732402-67f4-452e-b11a-49217ec7f9dc.png"
                 alt="Haga Water Limited Team" 
-                className="rounded-lg shadow-md w-full max-w-2xl object-contain mb-4"
+                className="rounded-lg shadow-md w-full max-w-2xl object-contain mb-4 cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => setSelectedImage({ 
+                  src: "/lovable-uploads/6b732402-67f4-452e-b11a-49217ec7f9dc.png",
+                  alt: "Haga Water Limited Team"
+                })}
               />
               <p className="text-sm sm:text-base text-gray-700 text-center">
                 Our dedicated team of professionals brings expertise and commitment to every project, ensuring the highest standards of service delivery and customer satisfaction.
@@ -30,7 +40,11 @@ const About = () => {
               <img 
                 src="/images/award.png" 
                 alt="Haga Water Limited receiving Maji Preneur award" 
-                className="rounded-lg shadow-md w-full md:w-2/5 object-cover"
+                className="rounded-lg shadow-md w-full md:w-2/5 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => setSelectedImage({ 
+                  src: "/images/award.png",
+                  alt: "Haga Water Limited receiving Maji Preneur award"
+                })}
               />
               <p className="text-sm sm:text-base text-gray-700">
                 We are proud recipients of the prestigious Maji Preneur award, recognizing our excellence and innovation in water filtration solutions. This award acknowledges our commitment to providing sustainable and efficient water treatment technologies to our communities.
@@ -74,6 +88,16 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+        />
+      )}
     </div>
   );
 };

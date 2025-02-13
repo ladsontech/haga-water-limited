@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Droplet, Building2, Factory, Sprout, Trophy, Clock, Shield, Wrench } from "lucide-react";
@@ -8,8 +7,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import ImageModal from "@/components/ImageModal";
 
 const Index = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   const services = [
     {
       title: "General Plumbing",
@@ -106,8 +109,9 @@ const Index = () => {
                           <img 
                             src={img} 
                             alt={`${service.title} ${index + 1}`} 
-                            className="w-full h-auto max-h-[600px] object-contain"
+                            className="w-full h-auto max-h-[600px] object-contain cursor-pointer hover:opacity-90 transition-opacity"
                             loading="lazy"
+                            onClick={() => setSelectedImage({ src: img, alt: `${service.title} ${index + 1}` })}
                           />
                         </div>
                       </SwiperSlide>
@@ -135,9 +139,18 @@ const Index = () => {
       </section>
 
       <Footer />
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+        />
+      )}
     </div>
   );
 };
 
 export default Index;
-
