@@ -8,6 +8,9 @@ const Navbar = () => {
   const location = useLocation();
   
   const isActive = (path: string) => {
+    if (path === "/project/Finished Projects" && location.pathname.includes("/project")) {
+      return true;
+    }
     return location.pathname === path;
   };
 
