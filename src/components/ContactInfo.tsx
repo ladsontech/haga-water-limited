@@ -31,7 +31,7 @@ const ContactInfo = () => {
       icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Location",
       value: "Spot Complex, Kasangati, Kampala",
-      link: "https://maps.google.com/maps?q=Spot+Complex,+Kasangati,+Kampala"
+      link: "https://www.google.com/maps/dir/Banda,+Kampala/spot+complex,+kasangati,+Kampala/@0.3932949,32.5784064,13z/data=!4m13!4m12!1m5!1m1!1s0x177db985b5f6b027:0x241b1da96f270722!2m2!1d32.6368481!2d0.3539163!1m5!1m1!1s0x177db113c526e2eb:0xd3aedc206e11d58c!2m2!1d32.603325!2d0.4384537?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
@@ -66,7 +66,7 @@ const ContactInfo = () => {
       
       <div className="mt-8 sm:mt-12 text-center">
         <p className="text-gray-600">
-          Visit us at Spot Complex, Kasangati, Kampala or check our location on <a href="https://maps.google.com/maps?q=Spot+Complex,+Kasangati,+Kampala" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Maps</a>.
+          Visit us at Spot Complex, Kasangati, Kampala or check our location on <a href="https://www.google.com/maps/dir/Banda,+Kampala/spot+complex,+kasangati,+Kampala/@0.3932949,32.5784064,13z/data=!4m13!4m12!1m5!1m1!1s0x177db985b5f6b027:0x241b1da96f270722!2m2!1d32.6368481!2d0.3539163!1m5!1m1!1s0x177db113c526e2eb:0xd3aedc206e11d58c!2m2!1d32.603325!2d0.4384537?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Maps</a>.
         </p>
       </div>
     </div>
