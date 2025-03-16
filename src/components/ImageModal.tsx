@@ -1,7 +1,6 @@
 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState } from "react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { ZoomIn, ZoomOut, X } from "lucide-react";
 
 interface ImageModalProps {
@@ -13,6 +12,7 @@ interface ImageModalProps {
 
 const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }: ImageModalProps) => {
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [loading, setLoading] = useState(true);
   
   const handleZoomIn = () => {
     setZoomLevel((prev) => Math.min(prev + 0.25, 3));
@@ -24,6 +24,10 @@ const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }: ImageModalProps) =>
   
   const handleReset = () => {
     setZoomLevel(1);
+  };
+
+  const handleImageLoad = () => {
+    setLoading(false);
   };
   
   return (
@@ -37,13 +41,27 @@ const ImageModal = ({ isOpen, onClose, imageSrc, imageAlt }: ImageModalProps) =>
         <div className="relative w-full h-full">
           {/* Image container */}
           <div className="overflow-auto max-h-[90vh] flex items-center justify-center p-4">
+            {loading && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
             <img
               src={imageSrc}
               alt={imageAlt}
               className="transition-transform duration-200 ease-in-out object-contain"
               style={{ transform: `scale(${zoomLevel})` }}
               onClick={(e) => e.stopPropagation()}
+              onLoad={handleImageLoad}
+              loading="lazy"
+              width="800"
+              height="600"
             />
+          </div>
+          
+          {/* Image caption for SEO */}
+          <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-center">
+            <p className="text-sm">{imageAlt}</p>
           </div>
           
           {/* Controls overlay */}
